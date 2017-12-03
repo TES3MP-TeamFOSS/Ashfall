@@ -574,7 +574,7 @@ Event.register(Events.ON_POST_INIT, function()
                    if Config.RealEstate.useVirtualSeptims == true then
                        local hit = false
 
-                       for index, mod in pairs(Data.Core.loadedMods) do
+                       for index, mod in pairs(Data.Core.loadedModules) do
                            if mod == "VirtualSeptims" then
                                hit = true
                            end
