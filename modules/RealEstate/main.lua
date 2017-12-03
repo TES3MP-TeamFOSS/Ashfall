@@ -343,7 +343,7 @@ end
 
 
 function GoldGetCurrencyName()
-    if Config.RealEstate.useVirtualSeptims == true then
+    if Config.RealEstate.useVirtualDrakes == true then
         return Config.RealEstate.nameCurrencyRegular
     else
         return Config.RealEstate.nameCurrencyVirtual
@@ -352,8 +352,8 @@ end
 
 
 function GoldGetAmount(player)
-    if Config.RealEstate.useVirtualSeptims == true then
-        return Data.VirtualSeptims.Get(player.name)
+    if Config.RealEstate.useVirtualDrakes == true then
+        return Data.VirtualDrakes.Get(player.name)
     end
 
     -- Todo: else return gold amount from inventory
@@ -362,8 +362,8 @@ end
 
 
 function GoldSetAmount(player, gold)
-    if Config.RealEstate.useVirtualSeptims == true then
-        Data.VirtualSeptims.Set(player, gold)
+    if Config.RealEstate.useVirtualDrakes == true then
+        Data.VirtualDrakes.Set(player, gold)
     else
         -- Todo: set gold in inventory
     end
@@ -571,17 +571,17 @@ Event.register(Events.ON_POST_INIT, function()
                    cellMonitorLastVisitTimer = TimerCtrl.create(CellMonitorLastVisit, 300000, { cellMonitorLastVisitTimer })
                    cellMonitorLastVisitTimer:start()
 
-                   if Config.RealEstate.useVirtualSeptims == true then
+                   if Config.RealEstate.useVirtualDrakes == true then
                        local hit = false
 
                        for index, mod in pairs(Data.Core.loadedModules) do
-                           if mod == "VirtualSeptims" then
+                           if mod == "VirtualDrakes" then
                                hit = true
                            end
                        end
 
                        if hit == false then
-                           logAppend(Log.LOG_ERROR, "useVirtualSeptims enabled but mod not installed.\n")
+                           logAppend(Log.LOG_ERROR, "useVirtualDrakes enabled but mod not installed.\n")
                            stopServer(-1)
                        end
                    end

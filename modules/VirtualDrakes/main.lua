@@ -1,4 +1,4 @@
--- TES3MP VirtualSeptims -*-lua-*-
+-- TES3MP VirtualDrakes -*-lua-*-
 -- "THE BEER-WARE LICENCE" (Revision 42):
 -- <mail@michael-fitzmayer.de> wrote this file.  As long as you retain
 -- this notice you can do whatever you want with this stuff. If we meet
@@ -7,12 +7,12 @@
 
 
 JsonInterface = require("jsonInterface")
-Config.VirtualSeptims = import(getModuleFolder() .. "config.lua")
+Config.VirtualDrakes = import(getModuleFolder() .. "config.lua")
 colour = import(getModuleFolder() .. "colour.lua")
 
 
 local accountCheckLastVisitTimer
-local accountGenerateSeptimsTimer
+local accountGenerateDrakesTimer
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
 
 
@@ -56,7 +56,7 @@ function AccountCheckLastVisit()
 
     for index, item in pairs(storage) do
         if storage[index].lastVisit ~= nil then
-            if timeCurrent - storage[index].lastVisit >= (Config.VirtualSeptims.maxAbandonTime * 3600) then
+            if timeCurrent - storage[index].lastVisit >= (Config.VirtualDrakes.maxAbandonTime * 3600) then
                 AccountClose(index)
                 local message = index .. "'s bank account has been closed.\n"
                 logMessage(Log.LOG_INFO, message)
@@ -83,16 +83,16 @@ function AccountClose(playerName)
 end
 
 
-function AccountGenerateSeptims()
+function AccountGenerateDrakes()
     local timeCurrent = os.time()
 
     Players.for_each(function(player)
             local timeLastActivity = player.customData["lastActivity"]
 
-            if (timeCurrent - timeLastActivity) < Config.VirtualSeptims.maxAFKTime then
-                local septimsCurrent = AccountGetSeptims(player.name)
-                septimsCurrent = math.ceil(septimsCurrent + Config.VirtualSeptims.septimsPerMinute)
-                AccountSetSeptims(player.name, septimsCurrent)
+            if (timeCurrent - timeLastActivity) < Config.VirtualDrakes.maxAFKTime then
+                local drakesCurrent = AccountGetDrakes(player.name)
+                drakesCurrent = math.ceil(drakesCurrent + Config.VirtualDrakes.drakesPerMinute)
+                AccountSetDrakes(player.name, drakesCurrent)
 
                 if player.customData["isAFK"] == true then
                     player:message(colour.Confirm .. "The interest payment will be continued.\n", false)
@@ -104,15 +104,15 @@ function AccountGenerateSeptims()
             end
     end)
 
-    accountGenerateSeptimsTimer:start()
+    accountGenerateDrakesTimer:start()
 end
 
 
-function AccountGetSeptims(playerName)
-    local septimsCurrent = storage[string.lower(playerName)].septims
+function AccountGetDrakes(playerName)
+    local drakesCurrent = storage[string.lower(playerName)].drakes
 
-    if septimsCurrent ~= nil then
-        return septimsCurrent
+    if drakesCurrent ~= nil then
+        return drakesCurrent
     else
         return 0
     end
@@ -121,20 +121,20 @@ end
 
 function AccountOpen(playerName)
     storage[string.lower(playerName)] = {}
-    storage[string.lower(playerName)].septims = 0
+    storage[string.lower(playerName)].drakes = 0
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end
 
 
-function AccountSetSeptims(playerName, count)
-    storage[string.lower(playerName)].septims = count
+function AccountSetDrakes(playerName, count)
+    storage[string.lower(playerName)].drakes = count
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end
 
 
 function AccountShow(player)
-    local septimsCurrent = AccountGetSeptims(player.name)
-    player:getGUI():customMessageBox(441, colour.Heading .. "BANK ACCOUNT\n\n" .. colour.Default .. septimsCurrent .. " Septims", "OK")
+    local drakesCurrent = AccountGetDrakes(player.name)
+    player:getGUI():customMessageBox(441, colour.Heading .. "BANK ACCOUNT\n\n" .. colour.Default .. drakesCurrent .. " Drakes", "OK")
 
     return true
 end
@@ -176,15 +176,15 @@ end)
 
 Event.register(Events.ON_POST_INIT, function()
                    accountCheckLastVisitTimer = TimerCtrl.create(AccountCheckLastVisit, 300000, { accountCheckLastVisitTimer })
-                   accountGenerateSeptimsTimer = TimerCtrl.create(AccountGenerateSeptims, 60000, { accountGenerateSeptimsTimer })
+                   accountGenerateDrakesTimer = TimerCtrl.create(AccountGenerateDrakes, 60000, { accountGenerateDrakesTimer })
                    accountCheckLastVisitTimer:start()
-                   accountGenerateSeptimsTimer:start()
+                   accountGenerateDrakesTimer:start()
 end)
 
 
 CommandController.registerCommand("bank", CommandHandler, colour.Command .. "/bank help" .. colour.Default .. " - Banking system.")
 
 
-Data["VirtualSeptims"] = {}
-Data.VirtualSeptims["Get"] = AccountGetSeptims
-Data.VirtualSeptims["Set"] = AccountSetSeptims
+Data["VirtualDrakes"] = {}
+Data.VirtualDrakes["Get"] = AccountGetDrakes
+Data.VirtualDrakes["Set"] = AccountSetDrakes

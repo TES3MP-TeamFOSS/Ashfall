@@ -6,9 +6,9 @@ config.maxAbandonTime = 336
 config.portkey = true
 config.portkeySlot = 16
 config.portkeyRefId = "iron fork"
-config.useVirtualSeptims = true
+config.useVirtualDrakes = true
 config.nameCurrencyRegular = "Drakes"
-config.nameCurrencyVirtual = "Septims"
+config.nameCurrencyVirtual = "Deposited Drakes"
 
 
 return config
