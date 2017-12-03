@@ -7,8 +7,8 @@
 
 
 require("irc")
-Config.IrcBridge = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.IrcBridge = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 local timer

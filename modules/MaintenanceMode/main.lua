@@ -6,12 +6,12 @@
 -- in return.  Michael Fitzmayer
 
 
-colour = import(getModFolder() .. "colour.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 local timer
 local status   = false
-local lockFile = getModFolder() .. package.config:sub(1, 1) .. "maintenance.lock"
+local lockFile = getDataFolder() .. package.config:sub(1, 1) .. "maintenance.lock"
 
 
 function CheckStatus()

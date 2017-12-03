@@ -6,8 +6,8 @@
 -- in return.  Michael Fitzmayer
 
 
-Config.DynamicDifficulty = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.DynamicDifficulty = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 function UpdateDifficulty(player, notify)

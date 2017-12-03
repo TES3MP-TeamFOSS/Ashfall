@@ -7,8 +7,8 @@
 
 
 JsonInterface = require("jsonInterface")
-Config.RealEstate = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.RealEstate = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 local cellMonitorLastVisitTimer

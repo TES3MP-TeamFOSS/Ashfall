@@ -7,8 +7,8 @@
 
 
 JsonInterface = require("jsonInterface")
-Config.VirtualSeptims = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.VirtualSeptims = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 local accountCheckLastVisitTimer

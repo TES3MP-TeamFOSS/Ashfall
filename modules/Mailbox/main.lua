@@ -7,8 +7,8 @@
 
 
 require("valid-email")
-Config.Mailbox = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.Mailbox = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 function Init(player)

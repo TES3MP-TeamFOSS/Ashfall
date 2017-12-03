@@ -7,8 +7,8 @@
 
 
 JsonInterface = require("jsonInterface")
-Config.MotD = import(getModFolder() .. "config.lua")
-colour = import(getModFolder() .. "colour.lua")
+Config.MotD = import(getModuleFolder() .. "config.lua")
+colour = import(getModuleFolder() .. "colour.lua")
 
 
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
