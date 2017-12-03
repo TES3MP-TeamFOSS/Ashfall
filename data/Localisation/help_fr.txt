@@ -1,0 +1,3 @@
+#FF8C00Système de localisation - AIDE
+
+#FA8072/lang set [lang]#FFFFFF - Choisir une langue.
