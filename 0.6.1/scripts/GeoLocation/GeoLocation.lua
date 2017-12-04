@@ -23,7 +23,7 @@ Methods = {}
 
 local geoLocation = {}
 local pathJson = "/path/"
-local intervalCleanup = 1
+local intervalCleanup = 30
 local timerCleanup = tes3mp.CreateTimerEx("Cleanup", time.seconds(intervalCleanup), "i", 0)
 
 
@@ -66,7 +66,6 @@ function Methods.Update(pid)
         index = index + 1
     end
 
-    geoLocation[pid].name = Players[pid].data.login.name
     JsonSave(pathJson .. "GeoLocation.json", geoLocation)
 end
 
