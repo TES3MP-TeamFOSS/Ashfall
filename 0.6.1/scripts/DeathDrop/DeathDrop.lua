@@ -25,6 +25,7 @@ Methods.Drop = function(pid)
             posX = tes3mp.GetPosX(pid), posY = tes3mp.GetPosY(pid), posZ = tes3mp.GetPosZ(pid),
         }
         local refId = item.refId
+        local count = item.count
         local refIndex =  0 .. "-" .. mpNum
 
         WorldInstance:SetCurrentMpNum(mpNum)
@@ -40,6 +41,7 @@ Methods.Drop = function(pid)
                 tes3mp.InitializeEvent(onlinePid)
                 tes3mp.SetEventCell(cell)
                 tes3mp.SetObjectRefId(refId)
+                tes3mp.SetObjectCount(count)
                 tes3mp.SetObjectRefNumIndex(0)
                 tes3mp.SetObjectMpNum(mpNum)
 
