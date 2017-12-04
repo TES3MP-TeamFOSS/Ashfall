@@ -4,4 +4,4 @@
 #FA8072/house add "[name]"#FFFFFF - Ajouter des invités.
 #FA8072/house remove "[name]"#FFFFFF - Retirer des invités.
 #FA8072/house guests#FFFFFF - Montrer les invités.
-#FA8072/house lock#FFFFFF - Vérouiller/dévérouiller la maison.
+#FA8072/house lock#FFFFFF - Verrouiller/déverrouiller la maison.

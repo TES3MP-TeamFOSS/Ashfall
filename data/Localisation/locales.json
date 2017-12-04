@@ -1,17 +1,22 @@
 {
-  "en":{
-      "close":"Close",
-      "langSet":"Language set to",
-      "modName":"Localisation system"
+  "en": {
+    "close": "Close",
+    "langSet": "Language set to",
+    "modName": "Localisation system"
   },
-  "de":{
-      "close":"Schließen",
-      "langSet":"Spracheinstellung",
-      "modName":"Lokalisierungs-System"
+  "de": {
+    "close": "Schließen",
+    "langSet": "Spracheinstellung",
+    "modName": "Lokalisierungs-System"
   },
-  "pt":{
-      "close":"Fechar",
-      "langSet":"Linguagem alterada para",
-      "modName":"Sistema de Localização"
+  "fr": {
+    "close": "Fermer",
+    "langSet": "Régler la langue sur",
+    "modName": "Système de localisation"
+  },
+  "pt": {
+    "close": "Fechar",
+    "langSet": "Linguagem alterada para",
+    "modName": "Sistema de Localização"
   }
 }
