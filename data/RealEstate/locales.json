@@ -54,5 +54,33 @@
       "youAlreadyOwn":"Dir gehört bereits",
       "youDontOwn":"Du besitzt noch kein Haus",
       "youNeedAtLeast":"Du benötigst mindestens"
+  },
+    "pt":{
+      "add":"Adicionar convidado",
+      "alreadyOnList":"já se encontra na lista de convidados",
+      "buy":"Comprar casa",
+      "behaveYourself":"Comporta-te apropriadamente",
+      "close":"Fechar",
+      "guestListEmpty":"A tua lista de convidados está vazia",
+      "guestsOf":"Convidados de",
+      "houseAbandoned":"foi abandonada",
+      "houseForSale":"Esta casa está à venda",
+      "houseFoundUnlocked":"Esta casa encontra-se destrancada",
+      "houseLocked":"foi trancada",
+      "houseOwnedBy":"O dono desta casa é",
+      "houseUnlocked":"foi destrancada, tem cuidado",
+      "list":"Lista de convidados",
+      "lock":"Trancar",
+      "modName":"Sistema Imobiliário",
+      "newGuest":"é agora considerado convidado",
+      "noLongerWelcome":"deixou de ser bem-vindo em tua casa",
+      "notYourGuest":"não está na lista de convidados",
+      "releaseAndBuy":"Abandonar e comprar",
+      "remove":"Remover convidado",
+      "unlock":"Destrancar",
+      "welcomeHome":"Bem-vindo a casa",
+      "youAlreadyOwn":"Já és dono",
+      "youDontOwn":"Ainda não és dono de uma casa",
+      "youNeedAtLeast":"Precisas de pelo menos"
   }
 }

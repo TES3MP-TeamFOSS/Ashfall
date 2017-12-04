@@ -8,5 +8,10 @@
       "close":"Schließen",
       "langSet":"Spracheinstellung",
       "modName":"Lokalisierungs-System"
+  },
+  "pt":{
+      "close":"Fechar",
+      "langSet":"Linguagem alterada para",
+      "modName":"Sistema de Localização"
   }
 }
