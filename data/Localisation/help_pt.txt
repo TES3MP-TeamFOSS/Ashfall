@@ -1,0 +1,3 @@
+#FF8C00Sistema de Localização - AJUDA
+
+#FA8072/lang set [lang]#FFFFFF - Definir linguagem.
