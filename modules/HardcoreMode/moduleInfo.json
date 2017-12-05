@@ -1,0 +1,8 @@
+{
+    "name": "HardcoreMode",
+    "author": "",
+    "version": "0.0.0",
+    "dependencies": {
+        "Core": ">=0.0.1"
+    }
+}
