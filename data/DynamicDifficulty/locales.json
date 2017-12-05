@@ -4,5 +4,8 @@
   },
   "de": {
     "difficultySetTo": "Das Schwierigkeits-Level beträgt nun"
+  },
+  "nl": {
+    "difficultySetTo": "De moeilijkheid is nu"
   }
 }
