@@ -1,0 +1,5 @@
+#FF8C00lokalisatie systeem - HELP
+
+#FA8072/lang set [lang]#FFFFFF - Zet taal.
+#FA8072/lang auto#FFFFFF - Zet taal automatisch.
+

@@ -22,5 +22,11 @@
     "langSet": "Linguagem alterada para",
     "modName": "Sistema de Localização",
     "featureDisabled": "Funcionalidade indisponível"
+  },
+  "nl": {
+    "close": "Sluit",
+    "langSet": "Lokalisatie gezet op",
+    "modName": "lokalisatie systeem",
+    "featureDisabled": "Instelling gedeactiveerd"
   }
 }
