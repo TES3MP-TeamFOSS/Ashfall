@@ -30,5 +30,13 @@
     "newBankAccount": "Uma nova conta foi aberta",
     "paymentContinued": "O pagamento vai continuar",
     "paymentStopped": "O pagamento foi parado por inatividade"
+  },
+  "nl": {
+    "accountBalance": "Account balans",
+    "close": "Sluit",
+    "currencyName": "Drakes",
+    "newBankAccount": "Een nieuwe bankaccount is geopend",
+    "paymentContinued": "De betaling gaat nu weer door",
+    "paymentStopped": "De betaling is stop gezet vanwege inactiviteit"
   }
 }
