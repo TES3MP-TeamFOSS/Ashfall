@@ -14,7 +14,8 @@
   "fr": {
     "close": "Fermer",
     "langSet": "Régler la langue sur",
-    "modName": "Système de localisation"
+    "modName": "Système de localisation",
+    "featureDisabled": "Fonctionnalité désactivé"
   },
   "pt": {
     "close": "Fechar",
