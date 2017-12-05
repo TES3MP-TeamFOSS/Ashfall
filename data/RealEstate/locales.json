@@ -110,5 +110,33 @@
     "youAlreadyOwn": "Já és dono",
     "youDontOwn": "Ainda não és dono de uma casa",
     "youNeedAtLeast": "Precisas de pelo menos"
+  },
+  "ru": {
+    "add": "Добавить друга дома",
+    "alreadyOnList": "уже в списке друзей дома",
+    "buy": "Купить дом",
+    "behaveYourself": "Ведите себя прилично",
+    "close": "Закрыть",
+    "guestListEmpty": "Список друзей дома пуст",
+    "guestsOf": "Друзья дома",
+    "houseAbandoned": "был оставлен хозяином",
+    "houseForSale": "Этот дом выставлен на продажу",
+    "houseFoundUnlocked": "Этот дом открыт",
+    "houseLocked": "был закрыт",
+    "houseOwnedBy": "Этот дом принадлежит игроку",
+    "houseUnlocked": "был открыт. Будьте осторожны",
+    "list": "Список друзей дома",
+    "lock": "Закрыть",
+    "modName": "Система домов",
+    "newGuest": "теперь друг дома",
+    "noLongerWelcome": "больше не друг дома",
+    "notYourGuest": "не в списке друзей дома",
+    "releaseAndBuy": "Покинуть Ваш текущий дом и купить",
+    "remove": "Удалить друга дома",
+    "unlock": "Открыть",
+    "welcomeHome": "Добро пожаловать домой",
+    "youAlreadyOwn": "У Вас уже есть дом",
+    "youDontOwn": "У Вас еще нет дома",
+    "youNeedAtLeast": "Вам нужно как минимум"
   }
 }
