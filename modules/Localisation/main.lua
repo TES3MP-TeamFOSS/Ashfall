@@ -115,8 +115,10 @@ end
 
 
 Event.register(Events.ON_PLAYER_CONNECT, function(player)
-                   local lang = LanguageGet(player)
-                   LanguageSet(player, lang, true)
+                   if Config.Localisation.languageSetAuto == true then
+                       local lang = LanguageGet(player)
+                       LanguageSet(player, lang, true)
+                   end
                    return true
 end)
 
