@@ -19,6 +19,11 @@
     "close": "Fermer"
   },
   "pt": {
-    "close": "Fechar"
+    "accountBalance": "Saldo da conta",
+    "close": "Fechar",
+    "currencyName": "Dracos",
+    "newBankAccount": "Uma nova conta foi aberta",
+    "paymentContinued": "O pagamento vai continuar",
+    "paymentStopped": "O pagamento foi parado por inatividade"
   }
 }
