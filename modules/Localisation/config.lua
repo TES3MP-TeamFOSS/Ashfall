@@ -1,7 +1,7 @@
 local config = {}
 
 
-config.enableAutoMode = true
+config.enableAutoMode = false
 
 
 return config
