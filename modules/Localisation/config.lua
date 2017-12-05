@@ -1,7 +1,7 @@
 local config = {}
 
 
-config.languageSetAuto = true
+config.enableAutoMode = true
 
 
 return config

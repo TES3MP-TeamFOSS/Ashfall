@@ -2,12 +2,14 @@
   "en": {
     "close": "Close",
     "langSet": "Language set to",
-    "modName": "Localisation system"
+    "modName": "Localisation system",
+    "featureDisabled": "Feature disabled"
   },
   "de": {
     "close": "Schließen",
     "langSet": "Spracheinstellung",
-    "modName": "Lokalisierungs-System"
+    "modName": "Lokalisierungs-System",
+    "featureDisabled": "Funktion nicht verfügbar"
   },
   "fr": {
     "close": "Fermer",

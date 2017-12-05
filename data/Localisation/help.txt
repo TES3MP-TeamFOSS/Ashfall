@@ -1,3 +1,4 @@
 #FF8C00Localisation system - HELP
 
 #FA8072/lang set [lang]#FFFFFF - Set language.
+#FA8072/lang auto#FFFFFF - Toggle auto-mode.

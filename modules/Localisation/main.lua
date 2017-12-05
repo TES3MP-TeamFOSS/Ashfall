@@ -10,7 +10,7 @@ JsonInterface = require("jsonInterface")
 colour = import(getModuleFolder() .. "colour.lua")
 Config.Localisation = import(getModuleFolder() .. "config.lua")
 
-if Config.Localisation.languageSetAuto == true then
+if Config.Localisation.enableAutoMode == true then
     http = require("socket.http")
     ltn12 = require("ltn12")
 end
@@ -26,6 +26,15 @@ function CommandHandler(player, args)
             LanguageSet(player, args[2])
             return true
         end
+    end
+
+    if args[1] == "auto" then
+        if Config.Localisation.enableAutoMode == true then
+            LanguageModeToggle(player)
+        else
+            player:message(colour.Neutral .. _(player, locales, "featureDisabled") .. colour.Default .. ".\n", false)
+        end
+        return true
     end
 
     Help(player)
@@ -54,7 +63,7 @@ end
 
 function LanguageGet(player)
     storage = JsonInterface.load(getDataFolder() .. "storage.json")
-    playerName = string.lower(player.name)
+    local playerName = string.lower(player.name)
 
     if storage[playerName] == nil then
         return "en"
@@ -64,16 +73,39 @@ function LanguageGet(player)
 end
 
 
-function LanguageSet(player, lang, auto)
-    auto = auto or false
+function LanguageModeToggle(player)
+    local playerName = string.lower(player.name)
+    local playerLang = LanguageGet(player)
 
-    playerName = string.lower(player.name)
+    if storage[playerName] == nil then
+        storage[playerName] = {}
+        storage[playerName].autoMode = true
+    end
+
+    if storage[playerName].autoMode == true then
+        LanguageSet(player, playerLang)
+        storage = JsonInterface.load(getDataFolder() .. "storage.json")
+        storage[playerName].autoMode = false
+    else
+        LanguageSet(player, playerLang, true)
+        storage = JsonInterface.load(getDataFolder() .. "storage.json")
+        storage[playerName].autoMode = true
+    end
+
+    JsonInterface.save(getDataFolder() .. "storage.json", storage)
+end
+
+
+function LanguageSet(player, lang, autoMode)
+    autoMode = autoMode or false
+
+    local playerName = string.lower(player.name)
 
     if storage[playerName] == nil then
         storage[playerName] = {}
     end
 
-    if auto == false then
+    if autoMode == false then
         storage[playerName].lang = lang
     else
         local resp = {}
@@ -115,9 +147,17 @@ end
 
 
 Event.register(Events.ON_PLAYER_CONNECT, function(player)
-                   if Config.Localisation.languageSetAuto == true then
-                       local lang = LanguageGet(player)
-                       LanguageSet(player, lang, true)
+                   local playerName = string.lower(player.name)
+
+                   if Config.Localisation.enableAutoMode == true then
+                       if storage[playerName] ~= nil then
+                           if storage[playerName].autoMode == false then
+                               return true
+                           end
+                       end
+
+                       local playerLang = LanguageGet(player)
+                       LanguageSet(player, playerLang, true)
                    end
                    return true
 end)

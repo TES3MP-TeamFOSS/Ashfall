@@ -1,3 +1,4 @@
 #FF8C00Sistema de Localização - AJUDA
 
 #FA8072/lang set [lang]#FFFFFF - Definir linguagem.
+#FA8072/lang auto#FFFFFF - Ligar/desligar modo automatico.
