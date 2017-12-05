@@ -28,6 +28,6 @@ be found in the `0.6.1` subdirectory.
 ## Installation instructions
 
 1. Copy the contents of `lib` into your `CoreScripts/lib` directory.
-2. Place your favoured mods in `CoreScripts/mods`.
-3. Some mods require additional data files. Copy these files into `CoreScripts/data`.
+2. Place your favoured modules in `CoreScripts/modules`.
+3. Some modules require additional data files. Copy these files into `CoreScripts/data`.
 4. Enjoy!
