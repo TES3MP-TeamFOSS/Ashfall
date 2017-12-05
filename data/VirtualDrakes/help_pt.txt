@@ -1,4 +1,4 @@
-#FF8C00Sistema bancario - HELP
+#FF8C00Sistema bancario - AJUDA
 
 #FFFFFFTeste sistema tem como proposito registar e organizar os teus Dracos investidos. Uma moeda alternativa, que ao contrario da regular é gerada por tempo de jogo.
 
