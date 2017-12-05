@@ -1,0 +1,24 @@
+{
+  "en": {
+    "accountBalance": "Account balance",
+    "close": "Close",
+    "currencyName": "Drakes",
+    "newBankAccount": "A new bank account has been opened",
+    "paymentContinued": "The payment will be continued",
+    "paymentStopped": "The payment has stopped due to inactivity"
+  },
+  "de": {
+    "accountBalance": "Kontostand",
+    "close": "Schließen",
+    "currencyName": "Draken",
+    "newBankAccount": "A neues Bankkonto wurde angelegt",
+    "paymentContinued": "Die Zahlung wird fortgesetzt ",
+    "paymentStopped": "Die Zahlung wird aufgrund von Inaktivität ausgesetzt"
+  },
+  "fr": {
+    "close": "Fermer"
+  },
+  "pt": {
+    "close": "Fechar"
+  }
+}

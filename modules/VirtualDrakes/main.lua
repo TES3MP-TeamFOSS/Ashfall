@@ -14,12 +14,13 @@ colour = import(getModuleFolder() .. "colour.lua")
 local accountCheckLastVisitTimer
 local accountGenerateDrakesTimer
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
+local locales = JsonInterface.load(getDataFolder() .. "locales.json")
 
 
 function Init(player)
     if AccountCheckStatus(player.name) == false then
         AccountOpen(player.name)
-        message = colour.Confirm .. "A new bank account has been opened.\n" .. colour.Default
+        message = colour.Confirm .. Data._(player, locales, "newBankAccount") .. ".\n" .. colour.Default
         player:message(message, false)
     end
 
@@ -39,7 +40,9 @@ end
 
 
 function Help(player)
-    local f = io.open(getDataFolder() .. "help.txt", "r")
+    local lang = Data.LanguageGet(player)
+
+    local f = io.open(getDataFolder() .. "help_" .. lang .. ".txt", "r")
     if f == nil then
         return false
     end
@@ -47,7 +50,7 @@ function Help(player)
     local message = f:read("*a")
     f:close()
 
-    player:getGUI():customMessageBox(231, message, "Close")
+    player:getGUI():customMessageBox(-1, message, Data._(player, locales, "close"))
 end
 
 
@@ -95,11 +98,11 @@ function AccountGenerateDrakes()
                 AccountSetDrakes(player.name, drakesCurrent)
 
                 if player.customData["isAFK"] == true then
-                    player:message(colour.Confirm .. "The interest payment will be continued.\n", false)
+                    player:message(colour.Confirm .. Data._(player, locales, "paymentContinued") .. ".\n", false)
                     player.customData["isAFK"] = false
                 end
             else
-                player:message(colour.Warning .. "The payment of interest has stopped due to inactivity.\n", false)
+                player:message(colour.Warning .. Data._(player, locales, "paymentStopped") .. ".\n", false)
                 player.customData["isAFK"] = true
             end
     end)
@@ -134,7 +137,7 @@ end
 
 function AccountShow(player)
     local drakesCurrent = AccountGetDrakes(player.name)
-    player:getGUI():customMessageBox(441, colour.Heading .. "BANK ACCOUNT\n\n" .. colour.Default .. drakesCurrent .. " Drakes", "OK")
+    player:getGUI():customMessageBox(441, colour.Heading .. Data._(player, locales, "accountBalance") .. "\n\n" .. colour.Default .. drakesCurrent .. " " .. Data._(player, locales, "currencyName"),  Data._(player, locales, "close"))
 
     return true
 end
