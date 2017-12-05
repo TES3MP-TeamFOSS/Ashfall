@@ -6,8 +6,12 @@
 -- in return.  Michael Fitzmayer
 
 
+JsonInterface = require("jsonInterface")
 Config.DynamicDifficulty = import(getModuleFolder() .. "config.lua")
 colour = import(getModuleFolder() .. "colour.lua")
+
+
+local locales = JsonInterface.load(getDataFolder() .. "locales.json")
 
 
 function UpdateDifficulty(player, notify)
@@ -36,7 +40,7 @@ function UpdateDifficulty(player, notify)
     end
 
     if Config.DynamicDifficulty.notify == true and notify == true then
-        player:message(colour.Neutral .. "Difficulty is now set to " .. tostring(difficulty) .. ".\n" .. colour.Default, false)
+        player:message(colour.Neutral .. Data._(player, locales, "difficultySetTo") .. " " .. tostring(difficulty) .. ".\n" .. colour.Default, false)
     end
 
     player:getSettings():setDifficulty(difficulty)
