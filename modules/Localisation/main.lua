@@ -8,6 +8,12 @@
 
 JsonInterface = require("jsonInterface")
 colour = import(getModuleFolder() .. "colour.lua")
+Config.Localisation = import(getModuleFolder() .. "config.lua")
+
+if Config.Localisation.languageSetAuto == true then
+    http = require("socket.http")
+    ltn12 = require("ltn12")
+end
 
 
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
@@ -58,16 +64,39 @@ function LanguageGet(player)
 end
 
 
-function LanguageSet(player, lang)
+function LanguageSet(player, lang, auto)
+    auto = auto or false
+
     playerName = string.lower(player.name)
 
     if storage[playerName] == nil then
         storage[playerName] = {}
     end
 
-    storage[playerName].lang = lang
-    JsonInterface.save(getDataFolder() .. "storage.json", storage)
+    if auto == false then
+        storage[playerName].lang = lang
+    else
+        local resp = {}
+        -- Needs to be fixed asap:
+        local ipAddr = "188.68.43.183"
+        local url = "http://freegeoip.net/csv/" .. ipAddr
 
+        http.request{
+            url = url,
+            sink = ltn12.sink.table(resp)
+        }
+
+        local index = 0
+        for substr in string.gmatch(resp[1], '([^,]+)') do
+            if index == 1 then
+                storage[playerName].lang = string.lower(substr)
+                break
+            end
+            index = index + 1
+        end
+    end
+
+    JsonInterface.save(getDataFolder() .. "storage.json", storage)
     player:message(colour.Neutral .. _(player, locales, "langSet") .. ": " .. LanguageGet(player) .. "\n" .. colour.Default, false)
 end
 
@@ -83,6 +112,13 @@ function _(player, locales, id)
 
     return locales[LanguageGet(player)][id]
 end
+
+
+Event.register(Events.ON_PLAYER_CONNECT, function(player)
+                   local lang = LanguageGet(player)
+                   LanguageSet(player, lang, true)
+                   return true
+end)
 
 
 CommandController.registerCommand("lang", CommandHandler, colour.Command .. "/lang" .. colour.Default .. " - Localisation system.")
