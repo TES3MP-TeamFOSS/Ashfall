@@ -1,0 +1,19 @@
+{
+  "en": {
+    "close": "Close",
+    "disable": "Disable"
+  },
+  "de": {
+    "close": "Schließen",
+    "disable": "Deaktivieren"
+  },
+  "fr": {
+    "close": "Fermer"
+  },
+  "nl": {
+    "close": "Sluit"
+  },
+  "pt": {
+    "close": "Fechar"
+  }
+}

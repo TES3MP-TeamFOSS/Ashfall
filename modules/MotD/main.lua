@@ -12,18 +12,21 @@ colour = import(getModuleFolder() .. "colour.lua")
 
 
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
+local locales = JsonInterface.load(getDataFolder() .. "locales.json")
 
 
 function Show(player, onConnect)
     onConnect = onConnect or false
 
-    local f = io.open(getDataFolder() .. "motd.txt", "r")
-    if f == nil then return false end
+    local lang = Data.LanguageGet(player)
+
+    local f = io.open(getDataFolder() .. "motd_" .. lang .. ".txt", "r")
+    if f == nil then
+        return false
+    end
 
     local message = f:read("*a")
     f:close()
-
-    message = message .. colour.Confirm .. os.date("\nCurrent time: %A %I:%M %p") .. colour.Default .. "\n"
 
     if onConnect == true then
         if storage[string.lower(player.name)] == nil then
@@ -33,13 +36,13 @@ function Show(player, onConnect)
 
         if storage[string.lower(player.name)] == true then
             if player.level == 1 and player.levelProgress == 0 then
-                player:getGUI():customMessageBox(211, message, "OK;Disable MotD")
+                player:getGUI():customMessageBox(211, message, Data._(player, locales, "close") .. ";" .. Data._(player, locales, "disable"))
             else
-                player:getGUI():customMessageBox(212, message, "OK;" .. Config.MotD.spawnLocation .. ";Disable MotD")
+                player:getGUI():customMessageBox(212, message, Data._(player, locales, "close") .. ";" .. Config.MotD.spawnLocation .. ";" .. Data._(player, locales, "disable"))
             end
         end
     else
-        player:getGUI():customMessageBox(213, message, "OK")
+        player:getGUI():customMessageBox(213, message, Data._(player, locales, "close"))
     end
 
     return true
