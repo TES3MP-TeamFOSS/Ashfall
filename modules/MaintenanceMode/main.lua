@@ -6,12 +6,14 @@
 -- in return.  Michael Fitzmayer
 
 
+JsonInterface = require("jsonInterface")
 colour = import(getModuleFolder() .. "colour.lua")
 
 
-local timer
-local status   = false
+local timerCheckStatus
+local status = false
 local lockFile = getDataFolder() .. package.config:sub(1, 1) .. "maintenance.lock"
+local locales = JsonInterface.load(getDataFolder() .. "locales.json")
 
 
 function CheckStatus()
@@ -27,22 +29,22 @@ function CheckStatus()
     if f ~= nil then
         status = true
 
-        local message = colour.Caution .. "The server is going into maintenance mode.\nTo prevent file corruption, you will be kicked within 10 seconds.\n" .. colour.Default
         Players.for_each(function(player)
-                player:message(message, false)
+                local message = colour.Caution .. Data._(player, locales, "warning") .. ".\n" .. colour.Default
+                player:getGUI():customMessageBox(-1, message, Data._(player, locales, "close"))
         end)
         f:close()
-        timer:restart(10000)
+        timerCheckStatus:restart(10000)
     else
         status = false
-        timer:restart(1000)
+        timerCheckStatus:restart(1000)
     end
 end
 
 
 Event.register(Events.ON_POST_INIT, function()
-                   timer = TimerCtrl.create(CheckStatus, 1000, { timer })
-                   timer:start()
+                   timerCheckStatus = TimerCtrl.create(CheckStatus, 1000, { timerCheckStatus })
+                   timerCheckStatus:start()
 end)
 
 

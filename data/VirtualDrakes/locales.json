@@ -16,7 +16,12 @@
     "paymentStopped": "Die Zahlung wird aufgrund von Inaktivität ausgesetzt"
   },
   "fr": {
-    "close": "Fermer"
+    "accountBalance": "Solde du compte",
+    "close": "Fermer",
+    "currencyName": "Drakes",
+    "newBankAccount": "Un nouveau compte bancaire a été ouvert",
+    "paymentContinued": "Le paiement va reprendre",
+    "paymentStopped": "Le paiement s'est arrêtée pour cause d'inactivité"
   },
   "pt": {
     "accountBalance": "Saldo da conta",

@@ -1,0 +1,16 @@
+{
+  "en": {
+    "close": "Close",
+    "warning": "The server is going into maintenance mode. You will be kicked within 10 seconds"
+  },
+  "de": {
+    "close": "Schließen",
+    "warning": "Der Server wird in den Wartungsmodus versetzt. Du wirst innerhalb von 10 Sekunden gekickt."
+  },
+  "fr": {
+    "close": "Fermer"
+  },
+  "pt": {
+    "close": "Fechar"
+  }
+}
