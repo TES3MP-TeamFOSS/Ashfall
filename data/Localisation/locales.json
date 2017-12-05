@@ -19,6 +19,7 @@
   "pt": {
     "close": "Fechar",
     "langSet": "Linguagem alterada para",
-    "modName": "Sistema de Localização"
+    "modName": "Sistema de Localização",
+    "featureDisabled": "Funcionalidade indisponível"
   }
 }
