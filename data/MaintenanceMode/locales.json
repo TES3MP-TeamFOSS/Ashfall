@@ -10,6 +10,10 @@
   "fr": {
     "close": "Fermer"
   },
+  "en": {
+    "close": "Sluit",
+    "warning": "De server gaat in onderhoudsstand. Je wordt in 10 seconden gekickt."
+  },
   "pt": {
     "close": "Fechar"
   }
