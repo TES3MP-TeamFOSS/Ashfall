@@ -4,14 +4,16 @@
     "deathMessage": "is dead and gone for good. Press F to pay respects",
     "disabled": "Hardcore mode disabled",
     "enabled": "Hardcore mode enabled. Be careful, death is now permanent",
-    "goneForGood": "You died. Life is over. There's no turning back now"
+    "goneForGood": "You died. Life is over. There's no turning back now",
+    "ladder": "LADDER"
   },
   "de": {
     "close": "Schließen",
     "deathMessage": "ist tot und für immer von uns gegangen. Drücke F um ihm Respekt zu zollen",
     "disabled": "Hardcore-Modus wurde deaktiviert",
     "enabled": "Der Hardcore-Modus ist nun aktiv. Gib Acht; wenn du stirbst, gibt es kein Zurück",
-    "goneForGood": "Du bist tot. Das Leben ist vorbei. Es gibt kein Zurück mehr"
+    "goneForGood": "Du bist tot. Das Leben ist vorbei. Es gibt kein Zurück mehr",
+    "ladder": "RANGLISTE"
   },
   "fr": {
     "close": "Fermer"

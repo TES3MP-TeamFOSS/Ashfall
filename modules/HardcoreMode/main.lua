@@ -22,7 +22,7 @@ function CommandHandler(player, args)
     end
 
     if args[1] == "ladder" then
-        LadderShow()
+        LadderShow(player)
         return true
     end
 
@@ -52,6 +52,7 @@ function ModeToggle(player)
 
     if storage[playerName] == nil then
         storage[playerName] = {}
+        storage[playerName].name = player.name
         storage[playerName].isDeath = false
         storage[playerName].isEnabled = false
         storage[playerName].levelEntry = player.level
@@ -76,8 +77,44 @@ function ModeToggle(player)
 end
 
 
-function LadderShow()
-    -- Todo.
+-- Thanks to Texafornian (https://github.com/Texafornian).
+function LadderShow(player)
+    local message = ""
+    local ladder = {}
+
+    for index, item in pairs(storage) do
+        if item.isDeath == false and item.isEnabled == true then
+            ladder[item.name] = item.levelCurrent - item.levelEntry
+        end
+    end
+
+    message = colour.Heading .. Data._(player, locales, "ladder") .. colour.Default .. "\n\n"
+    for index, item in spairs(ladder, function(t, a, b) return t[b] < t[a] end) do
+        message = message .. index .. " (" .. item .. ")" .. "\n"
+    end
+
+    player:getGUI():customMessageBox(-1, message, Data._(player, locales, "close"))
+end
+
+
+-- https://stackoverflow.com/questions/15706270/sort-a-table-in-lua
+function spairs(t, order)
+    local keys = {}
+    for k in pairs(t) do keys[#keys+1] = k end
+
+    if order then
+        table.sort(keys, function(a,b) return order(t, a, b) end)
+    else
+        table.sort(keys)
+    end
+
+    local i = 0
+    return function()
+        i = i + 1
+        if keys[i] then
+            return keys[i], t[keys[i]]
+        end
+    end
 end
 
 
@@ -103,6 +140,19 @@ Event.register(Events.ON_PLAYER_DEATH, function(player)
                    Players.for_each(function(player)
                            player:message(colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. colour.Default .. ".\n", false)
                    end)
+end)
+
+
+Event.register(Events.ON_PLAYER_LEVEL, function(player)
+                   local playerName = string.lower(player.name)
+
+                   if storage[playerName] ~= nil then
+                       if storage[playerName].isDeath == false then
+                           storage[playerName].levelCurrent = player.level
+                       end
+                   end
+
+                   JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end)
 
 
