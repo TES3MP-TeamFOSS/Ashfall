@@ -22,11 +22,12 @@
     "close": "Sluit"
   },
   "pt": {
-    "close": "Fechar"
+    "close": "Fechar",
     "deathMessage": "Está morto morrido para sempre. Pressiona F para prestar condolencias",
     "disabled": "Modo da pesada está desligado",
     "enabled": "Modo da pesada ativado. Cuidado, a morte é final a partir de agora",
-    "goneForGood": "Morreste. A tua vida acabou. Não há volta a dar"
+    "goneForGood": "Morreste. A tua vida acabou. Não há volta a dar",
+    "ladder": "PONTUAÇÕES"
   },
   "ru": {
     "close": "Закрыть",
