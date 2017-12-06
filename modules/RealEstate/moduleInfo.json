@@ -1,9 +1,9 @@
 {
     "name": "RealEstate",
     "author": "Michael Fitzmayer",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "dependencies": {
         "Core": ">=0.0.1",
-        "Localisation": ">=0.0.0"
+        "Localisation": ">=0.0.1"
     }
 }

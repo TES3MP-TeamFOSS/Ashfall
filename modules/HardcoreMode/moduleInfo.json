@@ -1,8 +1,9 @@
 {
     "name": "HardcoreMode",
-    "author": "",
-    "version": "0.0.0",
+    "author": "Michael Fitzmayer",
+    "version": "0.0.1",
     "dependencies": {
-        "Core": ">=0.0.1"
+        "Core": ">=0.0.1",
+        "Localisation": ">=0.0.1"
     }
 }

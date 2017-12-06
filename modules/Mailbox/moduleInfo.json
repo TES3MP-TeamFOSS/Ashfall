@@ -1,7 +1,7 @@
 {
-    "name": "UserConfig",
+    "name": "Mailbox",
     "author": "Michael Fitzmayer",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "dependencies": {
         "Core": ">=0.0.1"
     }
