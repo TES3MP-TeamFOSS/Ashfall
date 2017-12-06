@@ -1,7 +1,7 @@
 {
   "en": {
     "close": "Close",
-    "warning": "The server is going into maintenance mode. You will be kicked within 10 seconds"
+    "warning": "The server is going into maintenance mode. You will be kicked within 10 seconds."
   },
   "de": {
     "close": "Schließen",
@@ -16,5 +16,6 @@
   },
   "pt": {
     "close": "Fechar"
+    "warning": "O servidor vai entrar em modo de manutenção. Serás desconectado dentro de 10 segundos."
   }
 }

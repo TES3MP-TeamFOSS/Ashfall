@@ -1,0 +1,4 @@
+#FF8C00Modo da pesada - AJUDA
+
+#FA8072/hardcore toggle#FFFFFF - Ligar/desligar modo da pesada.
+#FA8072/hardcore ladder#FFFFFF - Mostrar pontuaçoes.
