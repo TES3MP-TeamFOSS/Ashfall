@@ -30,7 +30,7 @@ function CommandHandler(player, args)
 
     if args[1] == "auto" then
         if Config.Localisation.enableAutoMode == true then
-            LanguageModeToggle(player)
+            ModeToggle(player)
         else
             player:message(colour.Neutral .. _(player, locales, "featureDisabled") .. colour.Default .. ".\n", false)
         end
@@ -69,29 +69,6 @@ function LanguageGet(player)
 end
 
 
-function LanguageModeToggle(player)
-    local playerName = string.lower(player.name)
-    local playerLang = LanguageGet(player)
-
-    if storage[playerName] == nil then
-        storage[playerName] = {}
-        storage[playerName].autoMode = true
-    end
-
-    if storage[playerName].autoMode == true then
-        LanguageSet(player, playerLang)
-        storage = JsonInterface.load(getDataFolder() .. "storage.json")
-        storage[playerName].autoMode = false
-    else
-        LanguageSet(player, playerLang, true)
-        storage = JsonInterface.load(getDataFolder() .. "storage.json")
-        storage[playerName].autoMode = true
-    end
-
-    JsonInterface.save(getDataFolder() .. "storage.json", storage)
-end
-
-
 function LanguageSet(player, lang, autoMode)
     autoMode = autoMode or false
 
@@ -126,6 +103,29 @@ function LanguageSet(player, lang, autoMode)
 
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
     player:message(colour.Neutral .. _(player, locales, "langSet") .. ": " .. LanguageGet(player) .. "\n" .. colour.Default, false)
+end
+
+
+function ModeToggle(player)
+    local playerName = string.lower(player.name)
+    local playerLang = LanguageGet(player)
+
+    if storage[playerName] == nil then
+        storage[playerName] = {}
+        storage[playerName].autoMode = true
+    end
+
+    if storage[playerName].autoMode == true then
+        LanguageSet(player, playerLang)
+        storage = JsonInterface.load(getDataFolder() .. "storage.json")
+        storage[playerName].autoMode = false
+    else
+        LanguageSet(player, playerLang, true)
+        storage = JsonInterface.load(getDataFolder() .. "storage.json")
+        storage[playerName].autoMode = true
+    end
+
+    JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end
 
 
