@@ -62,7 +62,7 @@ function ModeToggle(player, force)
     end
 
     if storage[playerName].isEnabled == true and force == false then
-        if Config.HardcoreMode.force == true then
+        if Config.HardcoreMode.force == true or Config.HardcoreMode.oneTimeDecision == true then
             message = colour.Caution .. Data._(player, locales, "noTurningBack") .. ".\n"
         else
             if storage[playerName].isDeath == false then
@@ -90,7 +90,11 @@ function LadderShow(player)
 
     for index, item in pairs(storage) do
         if item.isDeath == false and item.isEnabled == true then
-            ladder[item.name] = item.levelCurrent - item.levelEntry
+            if Config.HardcoreMode.oneTimeDecision == true then
+                ladder[item.name] = item.levelCurrent
+            else
+                ladder[item.name] = item.levelCurrent - item.levelEntry
+            end
         end
     end
 
@@ -150,6 +154,10 @@ end)
 
 
 Event.register(Events.ON_PLAYER_ENDCHARGEN, function(player)
+                   if Config.HarcoreMode.oneTimeDecision == true then
+                       -- Todo
+                   end
+
                    if Config.HardcoreMode.force == true then
                        ModeToggle(player, true)
                    else

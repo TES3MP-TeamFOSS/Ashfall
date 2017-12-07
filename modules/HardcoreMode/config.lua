@@ -1,7 +1,9 @@
 local config = {}
 
 
-config.cellAfterlife = "Clutter Warehouse - Everything Must Go!"
+config.afterlife = "Clutter Warehouse - Everything Must Go!"
+config.force = false
+config.oneTimeDecision = true
 
 
 return config
