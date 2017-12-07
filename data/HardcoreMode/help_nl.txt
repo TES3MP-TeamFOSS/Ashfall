@@ -1,0 +1,5 @@
+#FF8C00Hardcore modus - HELP
+
+#FA8072/hardcore toggle#FFFFFF - Schakel hardcore modus.
+#FA8072/hardcore ladder#FFFFFF - Zie ladder.
+

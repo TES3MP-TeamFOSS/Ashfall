@@ -19,7 +19,12 @@
     "close": "Fermer"
   },
   "nl": {
-    "close": "Sluit"
+    "close": "Sluit",
+    "deathMessage": "is dood en voor goed weg. Druk f om respect te tonen",
+    "disabled": "Hardcore modus is gedeactiveerd",
+    "enabled": "Hardcore modus aangezet. Wees voorzichtig, dood is nu permanent",
+    "goneForGood": "Je bent dood. Je leven is over. Je kunt nu niet meer terug",
+    "ladder": "ranklijst"
   },
   "pt": {
     "close": "Fechar",
