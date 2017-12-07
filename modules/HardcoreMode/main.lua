@@ -13,7 +13,6 @@ colour = import(getModuleFolder() .. "colour.lua")
 
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
 local locales = JsonInterface.load(getDataFolder() .. "locales.json")
-
 Data.overrideChat = true
 
 
@@ -64,7 +63,7 @@ function ModeToggle(player, force)
     end
 
     if storage[playerName].isEnabled == true and force == false then
-        if Config.HardcoreMode.force == true then --or Config.HardcoreMode.oneTimeDecision == true then
+        if Config.HardcoreMode.force == true or Config.HardcoreMode.oneTimeDecision == true then
             message = colour.Caution .. Data._(player, locales, "noTurningBack") .. ".\n"
         else
             if storage[playerName].isDeath == false then
@@ -91,11 +90,11 @@ function LadderShow(player)
 
     for index, item in pairs(storage) do
         if item.isDeath == false and item.isEnabled == true then
-            --if Config.HardcoreMode.oneTimeDecision == true then
-            --ladder[item.name] = item.levelCurrent
-            --else
-            ladder[item.name] = item.levelCurrent - item.levelEntry
-            --end
+            if Config.HardcoreMode.oneTimeDecision == true or Config.HardcoreMode.force == true then
+                ladder[item.name] = item.levelCurrent
+            else
+                ladder[item.name] = item.levelCurrent - item.levelEntry
+            end
         end
     end
 
@@ -129,6 +128,17 @@ function spairs(t, order)
 end
 
 
+Event.register(Events.ON_GUI_ACTION, function(player, id, data)
+                   if id == 751 then
+                       if tonumber(data) == 1 then
+                           ModeToggle(player, true)
+                       else
+                           ModeToggle(player)
+                       end
+                   end
+end)
+
+
 Event.register(Events.ON_PLAYER_CELLCHANGE, function(player)
                    local playerName = string.lower(player.name)
 
@@ -155,14 +165,13 @@ end)
 
 
 Event.register(Events.ON_PLAYER_ENDCHARGEN, function(player)
-                   --if Config.HarcoreMode.oneTimeDecision == true then
-                       -- Todo
-                   --end
-
                    if Config.HardcoreMode.force == true then
                        ModeToggle(player, true)
-                   else
-                       ModeToggle(player)
+                       return
+                   end
+
+                   if Config.HardcoreMode.oneTimeDecision == true then
+                       player:getGUI():customMessageBox(751, Data._(player, locales, "oneTimeDecision"), Data._(player, locales, "yes") .. ";" .. Data._(player, locales, "no"))
                    end
 end)
 

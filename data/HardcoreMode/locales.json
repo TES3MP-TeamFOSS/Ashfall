@@ -6,7 +6,10 @@
     "enabled": "Hardcore mode enabled. Be careful, death is now permanent",
     "goneForGood": "You died. Life is over",
     "ladder": "LADDER",
-    "noTurningBack": "There's no turning back now"
+    "no": "No",
+    "noTurningBack": "There's no turning back now",
+    "oneTimeDecision": "Enable hardcore mode for this character?",
+    "yes": "Yes"
   },
   "de": {
     "close": "Schließen",
@@ -15,7 +18,10 @@
     "enabled": "Der Hardcore-Modus ist nun aktiv. Gib Acht; wenn du stirbst, gibt es kein Zurück",
     "goneForGood": "Du bist tot. Das Leben ist vorbei",
     "ladder": "RANGLISTE",
-    "noTurningBack": "Es gibt kein Zurück mehr"
+    "no": "Nein",
+    "noTurningBack": "Es gibt kein Zurück mehr",
+    "oneTimeDecision": "Für diesen Charakter den Hardcode-Modus aktivieren?",
+    "yes": "Ja"
   },
   "fr": {
     "close": "Fermer"
