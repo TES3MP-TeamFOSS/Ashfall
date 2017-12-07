@@ -14,6 +14,8 @@ colour = import(getModuleFolder() .. "colour.lua")
 local storage = JsonInterface.load(getDataFolder() .. "storage.json")
 local locales = JsonInterface.load(getDataFolder() .. "locales.json")
 
+Data.overrideChat = true
+
 
 function CommandHandler(player, args)
     if args[1] == "toggle" then
@@ -62,7 +64,7 @@ function ModeToggle(player, force)
     end
 
     if storage[playerName].isEnabled == true and force == false then
-        if Config.HardcoreMode.force == true or Config.HardcoreMode.oneTimeDecision == true then
+        if Config.HardcoreMode.force == true then --or Config.HardcoreMode.oneTimeDecision == true then
             message = colour.Caution .. Data._(player, locales, "noTurningBack") .. ".\n"
         else
             if storage[playerName].isDeath == false then
@@ -77,7 +79,6 @@ function ModeToggle(player, force)
         message = colour.Caution .. Data._(player, locales, "enabled") .. ".\n"
     end
 
-    message = message .. colour.Default
     player:message(message, false)
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end
@@ -90,15 +91,15 @@ function LadderShow(player)
 
     for index, item in pairs(storage) do
         if item.isDeath == false and item.isEnabled == true then
-            if Config.HardcoreMode.oneTimeDecision == true then
-                ladder[item.name] = item.levelCurrent
-            else
-                ladder[item.name] = item.levelCurrent - item.levelEntry
-            end
+            --if Config.HardcoreMode.oneTimeDecision == true then
+            --ladder[item.name] = item.levelCurrent
+            --else
+            ladder[item.name] = item.levelCurrent - item.levelEntry
+            --end
         end
     end
 
-    message = colour.Heading .. Data._(player, locales, "ladder") .. colour.Default .. "\n\n"
+    message = colour.Heading .. Data._(player, locales, "ladder") .. "\n\n"
     for index, item in spairs(ladder, function(t, a, b) return t[b] < t[a] end) do
         message = message .. index .. " (" .. item .. ")" .. "\n"
     end
@@ -148,15 +149,15 @@ Event.register(Events.ON_PLAYER_DEATH, function(player)
                    JsonInterface.save(getDataFolder() .. "storage.json", storage)
 
                    Players.for_each(function(player)
-                           player:message(colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. colour.Default .. ".\n", false)
+                           player:message(colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. ".\n", false)
                    end)
 end)
 
 
 Event.register(Events.ON_PLAYER_ENDCHARGEN, function(player)
-                   if Config.HarcoreMode.oneTimeDecision == true then
+                   --if Config.HarcoreMode.oneTimeDecision == true then
                        -- Todo
-                   end
+                   --end
 
                    if Config.HardcoreMode.force == true then
                        ModeToggle(player, true)
@@ -189,6 +190,25 @@ Event.register(Events.ON_PLAYER_RESURRECT, function(player)
                            end
                        end
                    end
+end)
+
+
+Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message)
+                   local chatMessage = ("%s (%d): %s\n"):format(player.name, player.pid, message)
+                   io.write(chatMessage)
+
+                   if player:getCell().description == Config.HardcoreMode.afterlife then
+                       Players.for_each(function(player)
+                               if player:getCell().description == Config.HardcoreMode.afterlife then
+                                   chatMessage = (colour.Neutral .. "%s " .. colour.Default .. "(%d): %s\n"):format(player.name, player.pid, message)
+                                   player:message(chatMessage, false)
+                               end
+                       end)
+
+                       return
+                   end
+
+                   player:message(colour.Default .. chatMessage, true)
 end)
 
 
