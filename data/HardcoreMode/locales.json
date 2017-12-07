@@ -33,7 +33,10 @@
     "enabled": "Hardcore modus aangezet. Wees voorzichtig, dood is nu permanent",
     "goneForGood": "Je bent dood. Je leven is over",
     "ladder": "RANKLIJST",
-    "noTurningBack": "Je kunt nu niet meer terug"
+    "no": "Nee",
+    "noTurningBack": "Je kunt nu niet meer terug",
+    "oneTimeDecision": "Zet hardcore modus aan voor deze karakter?",
+    "yes": "Ja"
   },
   "pt": {
     "close": "Fechar",
