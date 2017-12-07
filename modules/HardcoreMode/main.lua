@@ -46,7 +46,9 @@ function Help(player)
 end
 
 
-function ModeToggle(player)
+function ModeToggle(player, force)
+    force = force or false
+
     local message = ""
     local playerName = string.lower(player.name)
 
@@ -54,17 +56,21 @@ function ModeToggle(player)
         storage[playerName] = {}
         storage[playerName].name = player.name
         storage[playerName].isDeath = false
-        storage[playerName].isEnabled = false
+        storage[playerName].isEnabled = force
         storage[playerName].levelEntry = player.level
         storage[playerName].levelCurrent = player.level
     end
 
-    if storage[playerName].isEnabled == true then
-        if storage[playerName].isDeath == false then
-            storage[playerName] = nil
-            message = colour.Neutral .. Data._(player, locales, "disabled") .. ".\n"
+    if storage[playerName].isEnabled == true and force == false then
+        if Config.HardcoreMode.force == true then
+            message = colour.Caution .. Data._(player, locales, "noTurningBack") .. ".\n"
         else
-            message = color.Warning .. Data._(player, locales, "goneForGood") .. ".\n"
+            if storage[playerName].isDeath == false then
+                storage[playerName] = nil
+                message = colour.Neutral .. Data._(player, locales, "disabled") .. ".\n"
+            else
+                message = colour.Warning .. Data._(player, locales, "goneForGood") .. ". " .. Data._(player, locales, "noTurningBack") .. ".\n"
+            end
         end
     else
         storage[playerName].isEnabled = true
@@ -123,8 +129,8 @@ Event.register(Events.ON_PLAYER_CELLCHANGE, function(player)
 
                    if storage[playerName] ~= nil then
                        if storage[playerName].isDeath == true then
-                           if player:getCell().description ~= Config.HardcoreMode.cellAfterlife then
-                               player:getCell().description = Config.HardcoreMode.cellAfterlife
+                           if player:getCell().description ~= Config.HardcoreMode.afterlife then
+                               player:getCell().description = Config.HardcoreMode.afterlife
                            end
                        end
                    end
@@ -140,6 +146,15 @@ Event.register(Events.ON_PLAYER_DEATH, function(player)
                    Players.for_each(function(player)
                            player:message(colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. colour.Default .. ".\n", false)
                    end)
+end)
+
+
+Event.register(Events.ON_PLAYER_ENDCHARGEN, function(player)
+                   if Config.HardcoreMode.force == true then
+                       ModeToggle(player, true)
+                   else
+                       ModeToggle(player)
+                   end
 end)
 
 
@@ -161,8 +176,8 @@ Event.register(Events.ON_PLAYER_RESURRECT, function(player)
 
                    if storage[playerName] ~= nil then
                        if storage[playerName].isDeath == true then
-                           if player:getCell().description ~= Config.HardcoreMode.cellAfterlife then
-                               player:getCell().description = Config.HardcoreMode.cellAfterlife
+                           if player:getCell().description ~= Config.HardcoreMode.afterlife then
+                               player:getCell().description = Config.HardcoreMode.afterlife
                            end
                        end
                    end
