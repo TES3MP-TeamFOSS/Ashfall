@@ -12,7 +12,6 @@ Force hardcode mode for all players:
 ```Lua
 config.force = false
 ```
-
 Gives a one time decision possibility to players:
 ```Lua
 config.oneTimeDecision = false
