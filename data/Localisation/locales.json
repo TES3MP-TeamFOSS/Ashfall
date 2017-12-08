@@ -11,6 +11,12 @@
     "modName": "Lokalisierungs-System",
     "featureDisabled": "Funktion nicht verfügbar"
   },
+  "dk": {
+    "close": "Luk",
+    "langSet": "Sprog indstillet til",
+    "modName": "Systemslokalisering",
+    "featureDisabled": "Funktion deaktiveret"
+  },
   "fr": {
     "close": "Fermer",
     "langSet": "Régler la langue sur",

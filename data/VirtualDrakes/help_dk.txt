@@ -1,0 +1,5 @@
+#FF8C00Banksystem - HJÆLP
+
+#FFFFFFFormålet med banksystemet er at holde øje med dine investerede Drager. En alternativ valuta, i modsætning til rigtige Drager, som generes gennem aktive spilletid.
+
+#FA8072/bank show#FFFFFF - Vis konto.

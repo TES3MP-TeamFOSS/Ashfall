@@ -15,6 +15,14 @@
     "paymentContinued": "Die Zahlung wird fortgesetzt ",
     "paymentStopped": "Die Zahlung wird aufgrund von Inaktivität ausgesetzt"
   },
+  "dk": {
+    "accountBalance": "Kontobalance",
+    "close": "Luk",
+    "currencyName": "Drager",
+    "newBankAccount": "En ny bankkonto er blevet åbnet",
+    "paymentContinued": "Betalingen vil fortsætte",
+    "paymentStopped": "Betalingen er stoppet grundet inaktivitet"
+  },
   "fr": {
     "accountBalance": "Solde du compte",
     "close": "Fermer",

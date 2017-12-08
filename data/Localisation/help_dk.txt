@@ -1,0 +1,4 @@
+#FF8C00Lokaliseringssystem - HJÆLP
+
+#FA8072/lang set [lang]#FFFFFF - Indstil sprog.
+#FA8072/lang auto#FFFFFF - Skift til automatisk tilstand.

@@ -7,6 +7,10 @@
     "close": "Schließen",
     "disable": "Deaktivieren"
   },
+  "dk": {
+    "close": "Luk",
+    "disable": "Deaktiver"
+  },
   "fr": {
     "close": "Fermer"
   },
@@ -14,7 +18,7 @@
     "close": "Sluit"
   },
   "pt": {
-    "close": "Fechar"
+    "close": "Fechar",
     "disable": "Desactivar"
   }
 }
