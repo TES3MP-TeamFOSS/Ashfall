@@ -21,7 +21,7 @@ function Init(player)
         f:write(Config.Mailbox.welcomeMessage)
         f:close()
         message = colour.Confirm .. "A new mailbox has been initialised.\n" .. colour.Default
-        player:message(message, false)
+        player:message(0, message, false)
     else
         f:close()
     end
@@ -94,7 +94,7 @@ function InboxCheck(player)
     if c > 1 or c == 0 then message = message .. "s" end
 
     message = message .. " in your Inbox.\n" .. colour.Default
-    player:message(message, false)
+    player:message(0, message, false)
 
     return true
 end
@@ -164,7 +164,7 @@ function MessageDelete(player, id)
         end
     end
 
-    player:message(message, false)
+    player:message(0, message, false)
     return true
 end
 
@@ -223,7 +223,7 @@ function MessageRead(player, id, returnMessage)
     end
     f:close()
 
-    player:message(message, false)
+    player:message(0, message, false)
 
     if returnMessage == true then
         return message
@@ -266,13 +266,13 @@ function MessageSend(player, user, text)
 
             Players.for_each(function(receiver)
                     if string.lower(receiver.name) == string.lower(user) then
-                        receiver:message(colour.Neutral .. "You've got mail from  " .. player.name .. ".\n" .. colour.Default, false)
+                        receiver:message(0, colour.Neutral .. "You've got mail from  " .. player.name .. ".\n" .. colour.Default, false)
                     end
             end)
         end
     end
 
-    player:message(message, false)
+    player:message(0, message, false)
     return true
 end
 

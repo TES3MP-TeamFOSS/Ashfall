@@ -78,7 +78,7 @@ function ModeToggle(player, force)
         message = colour.Caution .. Data._(player, locales, "enabled") .. ".\n"
     end
 
-    player:message(message, false)
+    player:message(0, message, false)
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
 end
 
@@ -159,7 +159,7 @@ Event.register(Events.ON_PLAYER_DEATH, function(player)
                    JsonInterface.save(getDataFolder() .. "storage.json", storage)
 
                    Players.for_each(function(player)
-                           player:message(colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. ".\n", false)
+                           player:message(0, colour.Warning .. player.name .. " " .. Data._(player, locales, "deathMessage") .. ".\n", false)
                    end)
 end)
 
@@ -210,14 +210,14 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message)
                        Players.for_each(function(player)
                                if player:getCell().description == Config.HardcoreMode.afterlife then
                                    chatMessage = (colour.Neutral .. "%s " .. colour.Default .. "(%d): %s\n"):format(player.name, player.pid, message)
-                                   player:message(chatMessage, false)
+                                   player:message(0, chatMessage, false)
                                end
                        end)
 
                        return
                    end
 
-                   player:message(colour.Default .. chatMessage, true)
+                   player:message(0, colour.Default .. chatMessage, true)
 end)
 
 

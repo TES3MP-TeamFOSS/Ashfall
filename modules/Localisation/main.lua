@@ -32,7 +32,7 @@ function CommandHandler(player, args)
         if Config.Localisation.enableAutoMode == true then
             ModeToggle(player)
         else
-            player:message(colour.Neutral .. _(player, locales, "featureDisabled") .. colour.Default .. ".\n", false)
+            player:message(0, colour.Neutral .. _(player, locales, "featureDisabled") .. colour.Default .. ".\n", false)
         end
         return true
     end
@@ -102,7 +102,7 @@ function LanguageSet(player, lang, autoMode)
     end
 
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
-    player:message(colour.Neutral .. _(player, locales, "langSet") .. ": " .. LanguageGet(player) .. "\n" .. colour.Default, false)
+    player:message(0, colour.Neutral .. _(player, locales, "langSet") .. ": " .. LanguageGet(player) .. "\n" .. colour.Default, false)
 end
 
 

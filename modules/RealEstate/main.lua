@@ -122,7 +122,7 @@ function CellCheck(player)
 
     message = message .. colour.Default
     if sendMessage == true then
-        player:message(message, false)
+        player:message(0, message, false)
     end
 
     return 0
@@ -139,7 +139,7 @@ function CellMonitorLastVisit()
                 logMessage(Log.LOG_INFO, message)
                 Players.for_each(function(player)
                         local message = index .. " " .. Data._(player, locales, "houseAbandoned") .. ".\n"
-                        player:message(colour.Warning .. message)
+                        player:message(0, colour.Warning .. message)
                 end)
             end
         end
@@ -193,7 +193,7 @@ function CellBuy(player)
 
     message = message .. colour.Default
     if sendMessage == true then
-        player:message(message, false)
+        player:message(0, message, false)
     end
 
     return 0
@@ -271,7 +271,7 @@ function CellLockPlayerCell(player)
     end
 
     message = message .. colour.Default
-    player:message(message, false)
+    player:message(0, message, false)
 end
 
 
@@ -414,7 +414,7 @@ function GuestListAdd(player, guestName)
     end
 
     message = message .. colour.Default
-    player:message(message, false)
+    player:message(0, message, false)
     return true
 end
 
@@ -442,7 +442,7 @@ function GuestListRemove(player, guestName)
     end
 
     message = message .. colour.Default
-    player:message(message, false)
+    player:message(0, message, false)
     return true
 end
 
@@ -472,7 +472,7 @@ function GuestListShow(player)
 
     message = message .. colour.Default
     if sendMessage == true then
-        player:message(message, false)
+        player:message(0, message, false)
     end
 
     return true
@@ -494,7 +494,7 @@ function WarpHome(player)
         end
 
         if sendMessage == true then
-            player:message(message, false)
+            player:message(0, message, false)
         end
     end
 end

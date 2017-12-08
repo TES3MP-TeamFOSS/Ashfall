@@ -26,7 +26,7 @@ function RecvMessage()
                if lastMessage ~= message then
                    user.nick = string.gsub(user.nick, Config.IrcBridge.nickFilter, "")
                    Players.for_each(function(player)
-                           player:message(colour.Neutral .. user.nick .. colour.Default .. ": " .. message .. "\n", false)
+                           player:message(0, colour.Neutral .. user.nick .. colour.Default .. ": " .. message .. "\n", false)
                    end)
                    lastMessage = message
                end

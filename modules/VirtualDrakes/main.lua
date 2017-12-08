@@ -21,7 +21,7 @@ function Init(player)
     if AccountCheckStatus(player.name) == false then
         AccountOpen(player.name)
         message = colour.Confirm .. Data._(player, locales, "newBankAccount") .. ".\n" .. colour.Default
-        player:message(message, false)
+        player:message(0, message, false)
     end
 
     AccountUpdateLastVisit(player.name)
@@ -98,11 +98,11 @@ function AccountGenerateDrakes()
                 AccountSetDrakes(player.name, drakesCurrent)
 
                 if player.customData["isAFK"] == true then
-                    player:message(colour.Confirm .. Data._(player, locales, "paymentContinued") .. ".\n", false)
+                    player:message(0, colour.Confirm .. Data._(player, locales, "paymentContinued") .. ".\n", false)
                     player.customData["isAFK"] = false
                 end
             else
-                player:message(colour.Warning .. Data._(player, locales, "paymentStopped") .. ".\n", false)
+                player:message(0, colour.Warning .. Data._(player, locales, "paymentStopped") .. ".\n", false)
                 player.customData["isAFK"] = true
             end
     end)
