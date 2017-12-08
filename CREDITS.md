@@ -9,4 +9,4 @@
 | English    | [Michael Fitzmayer](https://github.com/mupfelofen-de) |
 | French     | Nwah                                                  |
 | Portuguese | [Grim Kriegor](https://github.com/GrimKriegor)        |
-| Russian    | scorpy and Воробей                                    |
+| Russian    | [[scorpy](http://morrowindonline.ru/) and Воробей     |
