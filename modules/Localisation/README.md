@@ -1,10 +1,10 @@
 # Localisation
 
-A localisation or i18n module
+A localisation modules to add localisation-support to TES3MP-modules.
 
 ## Example code
 
-locales.json:
+`locales.json`:
 ```JSON
 {
   "en": {
@@ -22,7 +22,7 @@ locales.json:
 }
 ```
 
-moduleInfo.json:
+`moduleInfo.json`:
 ```JSON
 {
     "name": "HelloWorld",
@@ -35,7 +35,7 @@ moduleInfo.json:
 }
 ```
 
-main.lua
+`main.lua`:
 ```Lua
 JsonInterface = require("jsonInterface")
 local locales = JsonInterface.load(getDataFolder() .. "locales.json")
