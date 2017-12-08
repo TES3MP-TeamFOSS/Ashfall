@@ -4,11 +4,11 @@ A localisation modules to add localisation-support to TES3MP-modules.
 
 ## Example code
 
-`locales.json`:
+**locales.json**:
 ```JSON
 {
   "en": {
-    "greeting": "hello"
+    "greeting": "Hello"
   },
   "de": {
     "greeting": "Hallo"
@@ -21,8 +21,7 @@ A localisation modules to add localisation-support to TES3MP-modules.
   }
 }
 ```
-
-`moduleInfo.json`:
+**moduleInfo.json**:
 ```JSON
 {
     "name": "HelloWorld",
@@ -34,8 +33,7 @@ A localisation modules to add localisation-support to TES3MP-modules.
     }
 }
 ```
-
-`main.lua`:
+**main.lua**:
 ```Lua
 JsonInterface = require("jsonInterface")
 local locales = JsonInterface.load(getDataFolder() .. "locales.json")

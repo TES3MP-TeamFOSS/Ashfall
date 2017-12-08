@@ -2,7 +2,7 @@
 
 A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.
 
-## Config options
+## Configuration
 
 The description of the cell used as afterlife area:
 ```Lua
