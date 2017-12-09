@@ -12,7 +12,8 @@
     "warning": "Serveren går i vedligeholdelsestilstand. Du bliver kicket i løbet af 10 sekunder."
   },
   "fr": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "warning": "Le serveur va être fermé pour maintenance. Vous serez déconnecté dans les 10 secondes à venir."
   },
   "nl": {
     "close": "Sluit",

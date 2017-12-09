@@ -12,7 +12,8 @@
     "disable": "Deaktiver"
   },
   "fr": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "disable": "Désactiver"
   },
   "nl": {
     "close": "Sluit"
