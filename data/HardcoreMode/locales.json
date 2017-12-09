@@ -23,6 +23,9 @@
     "oneTimeDecision": "Für diesen Charakter den Hardcode-Modus aktivieren?",
     "yes": "Ja"
   },
+  "fr": {
+    "close": "Fermer"
+  },
   "dk": {
     "close": "Luk",
     "deathMessage": "er død og borte. Tryk F for at udvise respekt",
@@ -34,9 +37,6 @@
     "noTurningBack": "Der er ingen vej tilbage nu",
     "oneTimeDecision": "Aktiver hardcore-tilstand for denne karakter?",
     "yes": "Ja"
-  },
-  "fr": {
-    "close": "Fermer"
   },
   "nl": {
     "close": "Sluit",
