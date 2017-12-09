@@ -1,6 +1,6 @@
 # PlayerExchangeLock
 
-An experimental module for servers who share one player base. It prevents players from joining server A in case they already logged into server B.
+An experimental module for servers who share the same player base. It prevents players from joining server A in case they already logged into server B.
 
 ## Configuration
 
