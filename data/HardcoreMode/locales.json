@@ -24,7 +24,16 @@
     "yes": "Ja"
   },
   "fr": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "deathMessage": "est mort pour de bon. Appuyez sur F pour lui rendre hommage",
+    "disabled": "Mode hardcore désactivé",
+    "enabled": "Mode hardcore activé. Faites attention, la mort est maintenant définitive",
+    "goneForGood": "Vous êtes mort. Votre vie s'arrête donc maintenant",
+    "ladder": "CLASSEMENT",
+    "no": "Non",
+    "noTurningBack": "Il n'y a pas de retour en arrière",
+    "oneTimeDecision": "Activer le mode hardcore pour ce personnage ?",
+    "yes": "Oui"
   },
   "dk": {
     "close": "Luk",
