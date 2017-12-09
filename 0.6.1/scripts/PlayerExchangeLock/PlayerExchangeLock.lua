@@ -45,6 +45,7 @@ end
 
 
 function Update()
+    statusLocal = {}
     statusRemote = JsonLoad(jsonRemote)
 
     for pid, player in pairs(Players) do
