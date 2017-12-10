@@ -2,8 +2,8 @@ local config = {}
 
 
 config.updateInterval = 500
-Config.PlayerExchangeLock.jsonLocal = "/path/to/serverA.json"
-Config.PlayerExchangeLock.jsonRemote = "/path/to/serverB.json"
+config.jsonLocal = "/path/to/serverA.json"
+config.jsonRemote = "/path/to/serverB.json"
 
 
 return config

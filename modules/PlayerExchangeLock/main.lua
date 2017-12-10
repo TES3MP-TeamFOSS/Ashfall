@@ -12,7 +12,7 @@ Config.PlayerExchangeLock = import(getModuleFolder() .. "config.lua")
 
 local statusLocal = {}
 local statusRemote = {}
-local timerUpdate = tes3mp.CreateTimerEx("TimerUpdateExpired", Config.PlayerExchangeLock.updateInterval, "i", 0)
+local timerUpdate
 
 
 function Update()
@@ -25,7 +25,7 @@ function Update()
             statusLocal[playerName] = {}
             statusLocal[playerName].online = true
 
-            if statusRemote[playerName] ~= nil then
+            if statusRemote ~= nil and statusRemote[playerName] ~= nil then
                 if statusRemote[playerName].online == true then
                     player:kick()
                 end
