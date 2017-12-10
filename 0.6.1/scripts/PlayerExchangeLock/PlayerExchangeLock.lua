@@ -56,7 +56,7 @@ function Update()
             statusLocal[playerName].online = true
         end
 
-        if statusRemote[playerName] ~= nil then
+        if statusRemote ~= nil and statusRemote[playerName] ~= nil then
             if statusRemote[playerName].online == true then
                 Players[pid]:Kick()
             end
