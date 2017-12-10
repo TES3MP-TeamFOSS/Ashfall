@@ -1,0 +1,7 @@
+#FF8C00Asuntojärjestelmä - APUA
+
+#FA8072/house#FFFFFF - Näytä käyttöliittymä.
+#FA8072/house add "[name]"#FFFFFF - Lisää vieras.
+#FA8072/house remove "[name]"#FFFFFF - Poista vieras.
+#FA8072/house guests#FFFFFF - Näytä vieraat.
+#FA8072/house lock#FFFFFF - Lukitse/avaa talosi.

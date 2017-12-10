@@ -194,5 +194,33 @@
     "youAlreadyOwn": "У Вас уже есть дом",
     "youDontOwn": "У Вас еще нет дома",
     "youNeedAtLeast": "Вам нужно как минимум"
+  },
+  "fi": {
+    "add": "Lisää vieras",
+    "alreadyOnList": "on jo lisätty vieraslistallesi",
+    "buy": "Osta talo",
+    "behaveYourself": "Käyttäydy hyvin",
+    "close": "Sulje",
+    "guestListEmpty": "Vieraslistasi on tyhjä",
+    "guestsOf": "Nämä vieraat ovat",
+    "houseAbandoned": "on hylätty",
+    "houseForSale": "Tämä talo on myynnissä",
+    "houseFoundUnlocked": "Olet löytänyt tämän talon lukot auki",
+    "houseLocked": "on lukittu",
+    "houseOwnedBy": "Tämän talon omistaa",
+    "houseUnlocked": "lukitus on avattu. Ole varovainen.",
+    "list": "Vieraslista",
+    "lock": "Lukko",
+    "modName": "Asuntojärjestelmä",
+    "newGuest": "on nyt vieras",
+    "noLongerWelcome": "ei ole enää tervetullut taloosi",
+    "notYourGuest": "ei ole vieraslistallasi",
+    "releaseAndBuy": "Hylkää nykyinen talosi ja osta",
+    "remove": "Poista vieras",
+    "unlock": "Avaa lukitus",
+    "welcomeHome": "Tervetuloa kotiin",
+    "youAlreadyOwn": "Omistat jo",
+    "youDontOwn": "Et omista taloa vielä",
+    "youNeedAtLeast": "Tarvitset ainakin"
   }
 }

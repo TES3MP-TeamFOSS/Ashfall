@@ -1,0 +1,4 @@
+#FF8C00Lokalisaatioj‰rjestelm‰ - APUA
+
+#FA8072/lang set [lang]#FFFFFF - Aseta kieli.
+#FA8072/lang auto#FFFFFF - Vaihda auto-moodi p‰‰lle tai pois.

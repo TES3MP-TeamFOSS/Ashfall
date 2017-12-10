@@ -22,5 +22,9 @@
   "pt": {
     "close": "Fechar",
     "warning": "O servidor vai entrar em modo de manutenção. Serás desconectado dentro de 10 segundos."
+  },
+  "fi": {
+    "close": "Sulje",
+    "warning": "Palvelin on menossa huoltotilaan. Yhteytesi katkaistaan 10 sekunnin sisällä."
   }
 }

@@ -1,0 +1,4 @@
+#FF8C00Hardcore-pelimuoto - APUA
+
+#FA8072/hardcore toggle#FFFFFF - Ota Hardcore-pelimuoto käyttöön.
+#FA8072/hardcore ladder#FFFFFF - Näytä tilastot.
