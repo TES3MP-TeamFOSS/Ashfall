@@ -11,6 +11,10 @@
     "close": "Luk",
     "warning": "Serveren går i vedligeholdelsestilstand. Du bliver kicket i løbet af 10 sekunder."
   },
+  "fi": {
+    "close": "Sulje",
+    "warning": "Palvelin on menossa huoltotilaan. Yhteytesi katkaistaan 10 sekunnin sisällä."
+  },
   "fr": {
     "close": "Fermer",
     "warning": "Le serveur va être fermé pour maintenance. Vous serez déconnecté dans les 10 secondes à venir."
@@ -22,9 +26,5 @@
   "pt": {
     "close": "Fechar",
     "warning": "O servidor vai entrar em modo de manutenção. Serás desconectado dentro de 10 segundos."
-  },
-  "fi": {
-    "close": "Sulje",
-    "warning": "Palvelin on menossa huoltotilaan. Yhteytesi katkaistaan 10 sekunnin sisällä."
   }
 }

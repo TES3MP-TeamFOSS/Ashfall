@@ -15,15 +15,15 @@
     "close": "Fermer",
     "disable": "Désactiver"
   },
+  "fi": {
+    "close": "Sulje",
+    "disable": "Ota pois käytöstä"
+  }.
   "nl": {
     "close": "Sluit"
   },
   "pt": {
     "close": "Fechar",
     "disable": "Desactivar"
-  },
-  "fi": {
-    "close": "Sulje",
-    "disable": "Ota pois käytöstä"
   }
 }

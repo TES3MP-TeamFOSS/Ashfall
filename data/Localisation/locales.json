@@ -17,6 +17,12 @@
     "modName": "Systemslokalisering",
     "featureDisabled": "Funktion deaktiveret"
   },
+  "fi": {
+    "close": "Sulje",
+    "langSet": "Aseta kieli",
+    "modName": "Lokalisaatiojärjestelmä",
+    "featureDisabled": "Ominaisuus otettu pois käytöstä"
+  },
   "fr": {
     "close": "Fermer",
     "langSet": "Régler la langue sur",
@@ -34,11 +40,5 @@
     "langSet": "Linguagem alterada para",
     "modName": "Sistema de Localização",
     "featureDisabled": "Funcionalidade indisponível"
-  },
-  "fi": {
-    "close": "Sulje",
-    "langSet": "Aseta kieli",
-    "modName": "Lokalisaatiojärjestelmä",
-    "featureDisabled": "Ominaisuus otettu pois käytöstä"
   }
 }

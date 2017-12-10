@@ -1,5 +1,5 @@
-#FF8C00Pankkij‰rjestelm‰ - APUA
+#FF8C00Pankkij√§rjestelm√§ - APUA
 
-#FFFFFFPankkij‰rjestelm‰n tarkoitus on pit‰‰ silm‰ll‰ sijoitettuja Drakejasi. J‰rjestelm‰ k‰ytt‰‰ muokattuja Drakeja joita syntyy aktiivisella pelaamisella ajan myˆt‰.
+#FFFFFFPankkij√§rjestelm√§n tarkoitus on pit√§√§ silm√§ll√§ sijoitettuja Drakejasi. J√§rjestelm√§ k√§ytt√§√§ muokattuja Drakeja joita syntyy aktiivisella pelaamisella ajan my√∂t√§.
 
-#FA8072/bank show#FFFFFF - N‰yt‰ pankkitili.
+#FA8072/bank show#FFFFFF - N√§yt√§ pankkitili.

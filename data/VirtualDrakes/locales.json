@@ -23,6 +23,14 @@
     "paymentContinued": "Betalingen vil fortsætte",
     "paymentStopped": "Betalingen er stoppet grundet inaktivitet"
   },
+  "fi": {
+    "accountBalance": "Tilin saldo",
+    "close": "Sulje",
+    "currencyName": "Drakea",
+    "newBankAccount": "Uusi pankkitili on avattu",
+    "paymentContinued": "Maksu jatkuu",
+    "paymentStopped": "Maksu on keskeytetty aktiivisuuden puutteen takia"
+  },
   "fr": {
     "accountBalance": "Solde du compte",
     "close": "Fermer",
@@ -46,13 +54,5 @@
     "newBankAccount": "Uma nova conta foi aberta",
     "paymentContinued": "O pagamento vai continuar",
     "paymentStopped": "O pagamento foi parado por inatividade"
-  },
-  "fi": {
-    "accountBalance": "Tilin saldo",
-    "close": "Sulje",
-    "currencyName": "Drakea",
-    "newBankAccount": "Uusi pankkitili on avattu",
-    "paymentContinued": "Maksu jatkuu",
-    "paymentStopped": "Maksu on keskeytetty aktiivisuuden puutteen takia"
   }
 }

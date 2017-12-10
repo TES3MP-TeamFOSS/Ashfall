@@ -23,6 +23,18 @@
     "oneTimeDecision": "Für diesen Charakter den Hardcode-Modus aktivieren?",
     "yes": "Ja"
   },
+  "fi": {
+    "close": "Sulje",
+    "deathMessage": "on kuollut ja kuopattu. Paina F kunnioittaaksesi häntä",
+    "disabled": "Hardcore-pelimuoto poistettu käytöstä",
+    "enabled": "Hardcore-pelimuoto otettu käyttöön. Muista että tässä pelimuodossa kuolema on lopullinen",
+    "goneForGood": "Kuolit. Elämä on loppu.",
+    "ladder": "TILASTOT",
+    "no": "Ei",
+    "noTurningBack": "Et voi enää kääntyä takaisin",
+    "oneTimeDecision": "Ota Hardcore-pelimuoto käyttöön tälle hahmolle?",
+    "yes": "Kyllä"
+  },
   "fr": {
     "close": "Fermer",
     "deathMessage": "est mort pour de bon. Appuyez sur F pour lui rendre hommage",
@@ -75,17 +87,5 @@
     "enabled": "Включен хардкорный режим. Будьте осторожнее, теперь смерть -- это навсегда.",
     "goneForGood": "Вы погибли. Ваша жизнь завершилась",
     "noTurningBack": "Назад пути нет"
-  },
-  "fi": {
-    "close": "Sulje",
-    "deathMessage": "on kuollut ja kuopattu. Paina F kunnioittaaksesi häntä",
-    "disabled": "Hardcore-pelimuoto poistettu käytöstä",
-    "enabled": "Hardcore-pelimuoto otettu käyttöön. Muista että tässä pelimuodossa kuolema on lopullinen",
-    "goneForGood": "Kuolit. Elämä on loppu.",
-    "ladder": "TILASTOT",
-    "no": "Ei",
-    "noTurningBack": "Et voi enää kääntyä takaisin",
-    "oneTimeDecision": "Ota Hardcore-pelimuoto käyttöön tälle hahmolle?",
-    "yes": "Kyllä"
   }
 }

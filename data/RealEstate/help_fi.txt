@@ -1,7 +1,7 @@
-#FF8C00Asuntoj‰rjestelm‰ - APUA
+#FF8C00Asuntoj√§rjestelm√§ - APUA
 
-#FA8072/house#FFFFFF - N‰yt‰ k‰yttˆliittym‰.
-#FA8072/house add "[name]"#FFFFFF - Lis‰‰ vieras.
+#FA8072/house#FFFFFF - N√§yt√§ k√§ytt√∂liittym√§.
+#FA8072/house add "[name]"#FFFFFF - Lis√§√§ vieras.
 #FA8072/house remove "[name]"#FFFFFF - Poista vieras.
-#FA8072/house guests#FFFFFF - N‰yt‰ vieraat.
+#FA8072/house guests#FFFFFF - N√§yt√§ vieraat.
 #FA8072/house lock#FFFFFF - Lukitse/avaa talosi.

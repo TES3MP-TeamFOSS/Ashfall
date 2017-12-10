@@ -1,4 +1,4 @@
 #FF8C00Hardcore-pelimuoto - APUA
 
-#FA8072/hardcore toggle#FFFFFF - Ota Hardcore-pelimuoto k‰yttˆˆn.
-#FA8072/hardcore ladder#FFFFFF - N‰yt‰ tilastot.
+#FA8072/hardcore toggle#FFFFFF - Ota Hardcore-pelimuoto k√§ytt√∂√∂n.
+#FA8072/hardcore ladder#FFFFFF - N√§yt√§ tilastot.

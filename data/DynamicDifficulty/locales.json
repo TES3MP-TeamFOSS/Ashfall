@@ -8,6 +8,9 @@
   "dk": {
     "difficultySetTo": "Sværhedsgrad er nu sat til"
   },
+  "fi": {
+    "difficultySetTo": "Vaikeustaso on nyt"
+  },
   "fr": {
     "difficultySetTo": "La difficulté est maintenant réglée sur"
   },
@@ -16,8 +19,5 @@
   },
   "pt": {
     "difficultySetTo": "Dificuldade foi definida como"
-  },
-  "fi": {
-    "difficultySetTo": "Vaikeustaso on nyt"
   }
 }
