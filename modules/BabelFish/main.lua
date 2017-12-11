@@ -8,20 +8,26 @@
 
 JsonInterface = require("jsonInterface")
 colour = import(getModuleFolder() .. "colour.lua")
-Config.Localisation = import(getModuleFolder() .. "config.lua")
+Config.BabelFish = import(getModuleFolder() .. "config.lua")
 http = require("socket.http")
+url = require("socket.url")
 ltn12 = require("ltn12")
 
 
+local storage = JsonInterface.load(getDataFolder() .. "storage.json")
 local locales = JsonInterface.load(getDataFolder() .. "locales.json")
+Data.overrideChat = true
 
 
 function CommandHandler(player, args)
-    if args[1] == "set" then
-        if args[2] ~= nil then
-            LanguageSet(player, args[2])
-            return true
-        end
+    if args[1] == nil then
+        ModeToggle(player)
+        return true
+    end
+
+    if args[1] == "opt" then
+        ConsentToggle(player)
+        return true
     end
 
     Help(player)
@@ -30,7 +36,7 @@ end
 
 
 function Help(player)
-    local lang = LanguageGet(player)
+    local lang = Data.LanguageGet(player)
 
     local f = io.open(getDataFolder() .. "help_" .. lang .. ".txt", "r")
     if f == nil then
@@ -40,8 +46,92 @@ function Help(player)
     local message = f:read("*a")
     f:close()
 
-    player:getGUI():customMessageBox(-1, message, _(player, locales, "close"))
+    player:getGUI():customMessageBox(-1, message, Data._(player, locales, "close"))
 end
 
 
-CommandController.registerCommand("trans", CommandHandler, colour.Command .. "/trans" .. colour.Default .. " - Translator.")
+function ModeToggle(player)
+    local playerName = string.lower(player.name)
+
+    if storage[playerName] == nil then
+        storage[playerName] = {}
+        storage[playerName].translate = false
+    end
+
+    local message
+    if storage[playerName].translate == true then
+        message = colour.Warning .. Data._(player, locales, "disabled")
+        storage[playerName].translate = false
+    else
+        message = colour.Confirm .. Data._(player, locales, "enabled")
+        storage[playerName].translate = true
+    end
+
+    player:message(0, message .. ".\n", false)
+    JsonInterface.save(getDataFolder() .. "storage.json", storage)
+end
+
+
+function ConsentToggle(player)
+    local playerName = string.lower(player.name)
+
+    if storage[playerName] == nil then
+        storage[playerName] = {}
+        storage[playerName].consent = false
+    end
+
+    local message
+    if storage[playerName].consent == true then
+        message = colour.Warning .. Data._(player, locales, "optout")
+        storage[playerName].consent = false
+    else
+        message = colour.Confirm .. Data._(player, locales, "optin")
+        storage[playerName].consent = true
+    end
+
+    player:message(0, message .. ".\n", false)
+    JsonInterface.save(getDataFolder() .. "storage.json", storage)
+end
+
+
+function Translate(from, to, text)
+    local resp = {}
+    local url = Config.BabelFish.url .. "?from=" .. from .. "&to=" .. to .. "&text=" .. url.escape(text)
+
+    http.request{
+        url = url,
+        sink = ltn12.sink.table(resp)
+    }
+
+    return resp[1]
+end
+
+
+Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
+                   local translations = {}
+                   local chatMessage
+                   local playerName = player.name
+                   local playerPid = player.pid
+                   local playerLang = Data.LanguageGet(player)
+
+                   Players.for_each(function(player)
+                           local receiverName = string.lower(player.name)
+
+                           if storage[receiverName] ~= nil and storage[string.lower(playerName)] ~= nil then
+                               if storage[receiverName].translate == true and storage[string.lower(playerName)].consent == true then
+                                   local receiverLang = Data.LanguageGet(player)
+                                   if translations[receiverLang] == nil then
+                                       translations[receiverLang] = Translate(playerLang, receiverLang, message)
+                                   end
+                                   message = translations[receiverLang]
+                               end
+                           end
+                           chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, message)
+                           player:message(channel, chatMessage, false)
+                   end)
+
+                   io.write(("Channel #%d %s"):format(channel, chatMessage))
+end)
+
+
+CommandController.registerCommand("babelfish", CommandHandler, colour.Command .. "/babelfish" .. colour.Default .. " - Translator.")

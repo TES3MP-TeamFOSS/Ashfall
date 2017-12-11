@@ -1,3 +1,9 @@
 # BabelFish
 
-An experimental module to translate chat messages on-the-fly using the Google API.
+An experimental translation module to send and receive messages in a preferred language using the Google API.
+
+## Configuration
+
+```Lua
+config.url = "todo"
+```

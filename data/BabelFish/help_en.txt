@@ -1,3 +1,6 @@
 #FF8C00Translator - HELP
 
-#FA8072/trans [country code] "[text]"#FFFFFF - Send translated chat message.
+#FFFFFFThis translator can be used to send and receive messages in your preferred language. Your messages will only be translated for others when you explicity opt-in.
+
+#FA8072/babelfish#FFFFFF - Toggle translation mode on/off.
+#FA8072/babelfish opt#FFFFFF - Opt-in/out.

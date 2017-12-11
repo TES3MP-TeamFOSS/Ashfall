@@ -1,23 +1,31 @@
 {
   "en": {
     "close": "Close",
+    "disabled": "Translator disabled",
+    "enabled": "Translator enabled",
+    "optin": "Your messages may now be translated.",
+    "optout": "Your messages are no longer translated"
   },
   "de": {
     "close": "Schließen",
+    "disabled": "Übersetzungsmodus deaktiviert",
+    "enabled": "Der Übersetzungsmodus ist nun aktiv",
+    "optin": "Deine Nachrichten dürfen jetzt übersetzt weren",
+    "optout": "Deine Nachrichten werden nicht länger übersetzt"
   },
   "dk": {
-    "close": "Luk",
+    "close": "Luk"
   },
   "fi": {
-    "close": "Sulje",
+    "close": "Sulje"
   },
   "fr": {
-    "close": "Fermer",
+    "close": "Fermer"
   },
   "nl": {
-    "close": "Sluit",
+    "close": "Sluit"
   },
   "pt": {
-    "close": "Fechar",
+    "close": "Fechar"
   }
 }
