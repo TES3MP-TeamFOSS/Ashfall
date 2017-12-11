@@ -14,7 +14,11 @@
     "optout": "Deine Nachrichten werden nicht länger übersetzt"
   },
   "dk": {
-    "close": "Luk"
+    "close": "Luk",
+    "disabled": "Oversætter deaktiveret",
+    "enabled": "Oversætter aktiveret",
+    "optin": "Dine beskeder vil nu blive oversat",
+    "optout": "Dine beskeder er ikke længere oversat"
   },
   "fi": {
     "close": "Sulje"
