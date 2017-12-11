@@ -2,4 +2,4 @@
 
 #FFFFFFTeste sistema tem como proposito registar e organizar os teus Dracos investidos. Uma moeda alternativa, que ao contrario da regular é gerada por tempo de jogo.
 
-#FA8072/bank show#FFFFFF - Mostrar conta.
+#FA8072/vd show#FFFFFF - Mostrar conta.

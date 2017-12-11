@@ -2,4 +2,4 @@
 
 #FFFFFFDer Zweck des Bankensystems ist es, Ihre investierten Draken im Auge zu behalten. Eine alternative Währung, die im Gegensatz zu normalen Draken, durch aktive Spielzeit generiert wird.
 
-#FA8072/bank show#FFFFFF - Aktueller Kontostand.
+#FA8072/vd show#FFFFFF - Aktueller Kontostand.
