@@ -185,7 +185,7 @@ Event.register(Events.ON_POST_INIT, function()
 end)
 
 
-CommandController.registerCommand("bank", CommandHandler, colour.Command .. "/bank help" .. colour.Default .. " - Banking system.")
+CommandController.registerCommand("vd", CommandHandler, colour.Command .. "/vd help" .. colour.Default .. " - Virtual Drakes.")
 
 
 Data["VirtualDrakes"] = {}
