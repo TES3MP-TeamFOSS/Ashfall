@@ -20,7 +20,11 @@
     "close": "Sulje"
   },
   "fr": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "disabled": "Traducteur désactivé",
+    "enabled": "Traducteur activé",
+    "optin": "Vos messages pourront maintenant être traduit",
+    "optout": "Vos messages ne sont plus traduit"
   },
   "nl": {
     "close": "Sluit"
