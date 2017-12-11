@@ -202,22 +202,20 @@ Event.register(Events.ON_PLAYER_RESURRECT, function(player)
 end)
 
 
-Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message)
+Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                    local chatMessage = ("%s (%d): %s\n"):format(player.name, player.pid, message)
-                   io.write(chatMessage)
+                   io.write(("Channel #%d %s"):format(channel, chatMessage))
 
                    if player:getCell().description == Config.HardcoreMode.afterlife then
                        Players.for_each(function(player)
                                if player:getCell().description == Config.HardcoreMode.afterlife then
                                    chatMessage = (colour.Neutral .. "%s " .. colour.Default .. "(%d): %s\n"):format(player.name, player.pid, message)
-                                   player:message(0, chatMessage, false)
+                                   player:message(channel, chatMessage, false)
                                end
                        end)
 
                        return
                    end
-
-                   player:message(0, colour.Default .. chatMessage, true)
 end)
 
 
