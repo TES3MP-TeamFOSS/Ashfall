@@ -1,0 +1,3 @@
+#FF8C00Translator - HELP
+
+#FA8072/trans [country code] "[text]"#FFFFFF - Send translated chat message.
