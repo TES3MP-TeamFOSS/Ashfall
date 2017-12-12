@@ -108,6 +108,8 @@ end
 
 
 Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
+                   if channel == nil then channel = 0 end
+
                    local translations = {}
                    local chatMessage
                    local playerName = player.name
@@ -118,13 +120,18 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                            local receiverName = string.lower(receiver.name)
                            local receiverLang = Data.LanguageGet(receiver)
 
-                           if storage[receiverName] ~= nil and storage[string.lower(playerName)] ~= nil then
-                               if storage[string.lower(playerName)].consent == true then
-                                   if translations[receiverLang] == nil then
+                           if translations[receiverLang] == nil then
+                               if storage[string.lower(playerName)] ~= nil then
+                                   if storage[string.lower(playerName)].consent == true then
                                        translations[receiverLang] = Translate(playerLang, receiverLang, message)
                                    end
                                end
+
+                               if translations[receiverLang] == nil then
+                                   translations[receiverLang] =  message
+                               end
                            end
+
                            if storage[receiverName].translate == true then
                                chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, translations[receiverLang])
                            else
