@@ -114,23 +114,26 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                    local playerPid = player.pid
                    local playerLang = Data.LanguageGet(player)
 
-                   Players.for_each(function(player)
-                           local receiverName = string.lower(player.name)
+                   Players.for_each(function(receiver)
+                           local receiverName = string.lower(receiver.name)
+                           local receiverLang = Data.LanguageGet(receiver)
 
                            if storage[receiverName] ~= nil and storage[string.lower(playerName)] ~= nil then
-                               if storage[receiverName].translate == true and storage[string.lower(playerName)].consent == true then
-                                   local receiverLang = Data.LanguageGet(player)
+                               if storage[string.lower(playerName)].consent == true then
                                    if translations[receiverLang] == nil then
                                        translations[receiverLang] = Translate(playerLang, receiverLang, message)
                                    end
-                                   message = translations[receiverLang]
                                end
                            end
-                           chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, message)
-                           player:message(channel, chatMessage, false)
+                           if storage[receiverName].translate == true then
+                               chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, translations[receiverLang])
+                           else
+                               chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, message)
+                           end
+                           receiver:message(channel, chatMessage, false)
                    end)
 
-                   io.write(("Channel #%d %s"):format(channel, chatMessage))
+                   io.write(("Channel #%d %s"):format(channel, message))
 end)
 
 
