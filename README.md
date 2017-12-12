@@ -1,4 +1,4 @@
-# TES3MP-TeamFOSS
+# TES3MP Scripts
 
 A collection of free/libre open source TES3MP scripts.
 
