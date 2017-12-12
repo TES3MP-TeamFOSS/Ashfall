@@ -74,7 +74,7 @@ function Help(player)
     local message = f:read("*a")
     f:close()
 
-    player:getGUI():customMessageBox(221, message, "Close")
+    player:getGUI():customMessageBox(-1, message, "Close")
 end
 
 

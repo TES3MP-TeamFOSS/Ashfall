@@ -44,7 +44,10 @@ function Help(player)
 
     local f = io.open(getDataFolder() .. "help_" .. lang .. ".txt", "r")
     if f == nil then
-        return false
+        f = io.open(getDataFolder() .. "help_en.txt", "r")
+        if f == nil then
+            return false
+        end
     end
 
     local message = f:read("*a")
