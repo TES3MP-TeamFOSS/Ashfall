@@ -11,10 +11,10 @@ config.url = "todo"
 ## Screenshots
 
 ### English
-[![English](screenshots/screenshot-english-tn.jpg)](screenshots/screenshot-english.jpg)
+[![English](screenshots/screenshot-english-tn.jpg)](screenshots/screenshot-english.jpg?raw=true "English")
 
 ### French
-[![French](screenshots/screenshot-french-tn.jpg)](screenshots/screenshot-french.jpg)
+[![French](screenshots/screenshot-french-tn.jpg)](screenshots/screenshot-french.jpg?raw=true "French")
 
 ### German
-[![German](screenshots/screenshot-german-tn.jpg)](screenshots/screenshot-german.jpg)
+[![German](screenshots/screenshot-german-tn.jpg)](screenshots/screenshot-german.jpg?raw=true "German")
