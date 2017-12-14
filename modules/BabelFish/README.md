@@ -1,6 +1,6 @@
 # BabelFish
 
-An experimental translation module to send and receive messages in a preferred language using the Google API.
+An experimental translation module to send and receive messages in a preferred language using the [BabelFish Google translate API in nodeJS](../../web/BabelFish).
 
 ## Configuration
 
