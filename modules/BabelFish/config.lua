@@ -1,7 +1,7 @@
 local config = {}
 
 
-config.url = "todo"
+config.url = "http://localhost:8000/"
 
 
 return config

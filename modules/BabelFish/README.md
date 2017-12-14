@@ -5,7 +5,7 @@ An experimental translation module to send and receive messages in a preferred l
 ## Configuration
 
 ```Lua
-config.url = "todo"
+config.url = "http://localhost:8000/"
 ```
 
 ## Screenshots
