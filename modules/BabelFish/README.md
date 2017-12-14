@@ -7,6 +7,10 @@ An experimental translation module to send and receive messages in a preferred l
 ```Lua
 config.url = "http://localhost:8000/"
 ```
+```Lua
+config.forceSpecificTranslation = false
+config.forcedLanguage = "en"
+```
 
 ## Screenshots
 
