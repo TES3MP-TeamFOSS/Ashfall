@@ -143,14 +143,14 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                            end
 
                            receiver:message(channel, chatMessage, false)
-
-                           if Config.BabelFish.forceSpecificTranslation == true then
-                               if translations[Config.BabelFish.forcedLanguage] == nil and playerLang ~= Config.BabelFish.forcedLanguage then
-                                   translations[Config.BabelFish.forcedLanguage] = Translate(playerLang, Config.BabelFish.forcedLanguage, message)
-                                   Data.BabelFishMessage = translations[Config.BabelFish.forcedLanguage]
-                               end
-                           end
                    end)
+
+                   if Config.BabelFish.forceSpecificTranslation == true then
+                       if translations[Config.BabelFish.forcedLanguage] == nil and playerLang ~= Config.BabelFish.forcedLanguage then
+                           translations[Config.BabelFish.forcedLanguage] = Translate(playerLang, Config.BabelFish.forcedLanguage, message)
+                           Data.BabelFishMessage = translations[Config.BabelFish.forcedLanguage]
+                       end
+                   end
 
                    io.write(("Channel #%d %s"):format(channel, message))
 end)
