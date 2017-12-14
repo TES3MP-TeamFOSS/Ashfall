@@ -125,13 +125,13 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
 
                            if translations[receiverLang] == nil then
                                if storage[string.lower(playerName)] ~= nil then
-                                   if storage[string.lower(playerName)].consent == true then
+                                   if storage[string.lower(playerName)].consent == true and playerLang ~= receiverLang then
                                        translations[receiverLang] = Translate(playerLang, receiverLang, message)
                                    end
                                end
 
                                if translations[receiverLang] == nil or string.match(translations[receiverLang], "{ Error: The language") then
-                                   translations[receiverLang] = message
+                                  translations[receiverLang] = message
                                end
                            end
 
