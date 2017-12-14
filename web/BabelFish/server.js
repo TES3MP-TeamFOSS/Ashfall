@@ -6,10 +6,10 @@ port = 8000;
 app.listen(port);
 app.get('/', function(req, res) {
   var translateObj = {};
-  if(req.query.to && translate.isSupported(req.query.to)){
+  if(req.query.to && translate.languages.isSupported(req.query.to)){
     translateObj['to'] = req.query.to;
   }
-  if(req.query.from && translate.isSupported(req.query.from)){
+  if(req.query.from && translate.languages.isSupported(req.query.from)){
     translateObj['from'] = req.query.from;
   }
   translate(req.query.text, translateObj).then(result => {
