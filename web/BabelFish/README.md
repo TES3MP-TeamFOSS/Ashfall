@@ -1,27 +1,27 @@
 # BabelFish Google translate API in nodeJS
 
-This API will translate GET queries you throw against it. You need LuaSocket to be able to interact with it. It was intended to be used with the [BabelFish](../../modules/BabelFish/) module.
+This API will translate GET queries. You need LuaSocket to be able to interact with it. It was intended to be used with the [BabelFish](../../modules/BabelFish/) module.
 
 ## How to query it
 
-You have 3 variables of which one is actually needed.
+You have 3 variables, one of which is required, the others being optional.
 * to (optional)
 * from (optional)
-* text (needed)
+* text (required)
 
-`to` is optional if it is not set it will default to english.  
-`from` is optional if not set it will autodetect language.  
-`ext` is the text you want to translate.  
+`to` is optional. If it isn't set it will default to English.  
+`from` is optional. If not set it will autodetect the language.  
+`text` is the text you want to translate.  
 
-If you have the nodeJS server running a normally a query would look like this:
+If you have the nodeJS server running, a normal query would look like this:
 ```
 http://localhost:8000/?to=en&from=nl&text=Het%20werkt!
 ```
-Which will give the plain text response of: It works!
+Which will give the plain text response of: `It works!`
 
 ## How to set it up
 
-This is needs to run on nodejs so install these packages:
+This needs nodejs to run, so install these packages:
 * nodejs
 * npm
 
@@ -29,7 +29,7 @@ If you are unsure on how to install these packages look here:
 
 [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/)
 
-Once those packages are installed go into this directory with a terminal. issue the commands:
+Once those packages are installed go into this directory with a terminal. Issue the commands:
 ```
 npm install
 npm server.js
@@ -41,7 +41,7 @@ http://localhost:8000/?text=Het%20werkt!
 
 ## Recommendation
 
-You should be good to go now but if you want to daemonize the api it's highly recommended to install pm2. This is needed to be installed globablly so either:
+You should be good to go now, but if you want to daemonize the API it's highly recommended to install pm2. This needs to be installed globally, so either:
 ```
 sudo npm install -g pm2
 ```
