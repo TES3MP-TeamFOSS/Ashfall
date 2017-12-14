@@ -95,5 +95,9 @@ end)
 
 
 Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
+                   if Data.BabelFishMessage ~= nil then
+                       message = Data.BabelFishMessage
+                   end
+
                    SendMessage(message)
 end)
