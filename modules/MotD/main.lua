@@ -22,7 +22,10 @@ function Show(player, onConnect)
 
     local f = io.open(getDataFolder() .. "motd_" .. lang .. ".txt", "r")
     if f == nil then
-        return false
+        f = io.open(getDataFolder() .. "motd_en.txt", "r")
+        if f == nil then
+            return false
+        end
     end
 
     local message = f:read("*a")
