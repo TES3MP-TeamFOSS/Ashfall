@@ -11,8 +11,10 @@ You have 3 variables of which one is actually needed.
 * text (needed)
 
 To is optional if it is not set it will default to English.
+
 From is optional if not set it will autodetect language.
-Text is the text you want to translate
+
+Text is the text you want to translate.
 
 If you have the nodeJS server running a normally query would look like this:
 ```
@@ -20,7 +22,7 @@ http://localhost:8000/?to=en&from=nl&text=Het%20werkt!
 ```
 
 Which will give a plain text response of:
-It works.
+It works!
 
 ## How to set it up
 
@@ -54,7 +56,7 @@ or:
 su -c "npm install -g pm2"
 ```
 
-Once done you can daeomonize the server like so:
+Once done you can daemonize the server like so:
 ```
 pm2 start server.js --name BabelFish API
 ```
