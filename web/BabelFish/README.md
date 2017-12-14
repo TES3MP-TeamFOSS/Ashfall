@@ -1,6 +1,6 @@
 # BabelFish Google translate API in nodeJS
 
-This API will translate GET queries you provide it. You need LuaSocket to be able to interact with it. It was intended to be used with the [BabelFish](../../modules/BabelFish/) module.
+This API will translate GET queries. You need LuaSocket to be able to interact with it. It was intended to be used with the [BabelFish](../../modules/BabelFish/) module.
 
 ## How to query it
 
@@ -41,7 +41,7 @@ http://localhost:8000/?text=Het%20werkt!
 
 ## Recommendation
 
-You should be good to go now but if you want to daemonize the api it's highly recommended to install pm2. This needs to be installed globablly so either:
+You should be good to go now, but if you want to daemonize the API it's highly recommended to install pm2. This needs to be installed globally, so either:
 ```
 sudo npm install -g pm2
 ```
