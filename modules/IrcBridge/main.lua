@@ -94,6 +94,6 @@ Event.register(Events.ON_POST_INIT, function()
 end)
 
 
-Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message)
-                   SendMessage(string.sub(message, 8))
+Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
+                   SendMessage(message)
 end)
