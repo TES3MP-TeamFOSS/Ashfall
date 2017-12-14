@@ -44,7 +44,7 @@ Then try it out on your localhost:
 http://localhost:8000/?text=Het%20werkt!
 ```
 
-## Reccomendation
+## Recommendation
 
 You should be good to go now but if you want to daemonize the api it's highly recommended to install pm2.
 This is needed to be installed globablly so either:
