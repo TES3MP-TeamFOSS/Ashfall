@@ -96,7 +96,7 @@ end)
 
 Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                    if Data.BabelFishMessage ~= nil then
-                       message = Data.BabelFishMessage
+                       message = ("%s (%d): %s\n"):format(player.name, player.pid, Data.BabelFishMessage)
                    end
 
                    SendMessage(message)

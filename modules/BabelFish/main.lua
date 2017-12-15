@@ -113,7 +113,6 @@ end
 Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                    if channel == nil then channel = 0 end
 
-                   Data.BabelFishMessage = nil
                    local translations = {}
                    local chatMessage
                    local playerName = player.name
