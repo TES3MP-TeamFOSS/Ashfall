@@ -85,8 +85,7 @@ function LanguageSet(player, lang, autoMode)
         storage[playerName].lang = lang
     else
         local resp = {}
-        -- Needs to be fixed asap:
-        local ipAddr = "188.68.43.183"
+        local ipAddr = player.address
         local url = "http://freegeoip.net/csv/" .. ipAddr
 
         http.request{
