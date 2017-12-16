@@ -65,7 +65,7 @@ function LanguageGet(player)
     local playerName = string.lower(player.name)
 
     if storage[playerName] == nil then
-        return "en"
+        return Config.Localisation.fallbackLanguage
     end
 
     return storage[playerName].lang
@@ -85,7 +85,7 @@ function LanguageSet(player, lang, autoMode)
         storage[playerName].lang = lang
     else
         local resp = {}
-        local ipAddr = player.address
+        local ipAddr = tostring(player.address)
         local url = "http://freegeoip.net/csv/" .. ipAddr
 
         http.request{
@@ -97,10 +97,15 @@ function LanguageSet(player, lang, autoMode)
         for substr in string.gmatch(resp[1], '([^,]+)') do
             if index == 1 then
                 storage[playerName].lang = string.lower(substr)
+                print(string.lower(substr))
                 break
             end
             index = index + 1
         end
+    end
+
+    if storage[playerName].lang == "0.0000" then
+        storage[playerName].lang = Config.Localisation.fallbackLanguage
     end
 
     JsonInterface.save(getDataFolder() .. "storage.json", storage)
@@ -133,11 +138,11 @@ end
 
 function _(player, locales, id)
     if locales[LanguageGet(player)] == nil then
-        return locales["en"][id]
+        return locales[Config.Localisation.fallbackLanguage][id]
     end
 
     if locales[LanguageGet(player)][id] == nil then
-        return locales["en"][id]
+        return locales[Config.Localisation.fallbackLanguage][id]
     end
 
     return locales[LanguageGet(player)][id]

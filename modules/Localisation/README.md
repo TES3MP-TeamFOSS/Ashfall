@@ -2,6 +2,15 @@
 
 A localisation modules to add localisation-support to TES3MP-modules.
 
+## Configuration
+
+```Lua
+config.enableAutoMode = true
+```
+```Lua
+config.fallbackLanguage = "en"
+```
+
 ## Example code
 
 **locales.json**:
