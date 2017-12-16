@@ -135,8 +135,12 @@ Event.register(Events.ON_PLAYER_SENDMESSAGE, function(player, message, channel)
                                end
                            end
 
-                           if storage[receiverName].translate == true then
-                               chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, translations[receiverLang])
+                           if storage[receiverName] ~= nil then
+                               if storage[receiverName].translate == true then
+                                   chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, translations[receiverLang])
+                               else
+                                   chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, message)
+                               end
                            else
                                chatMessage = ("%s (%d): %s\n"):format(playerName, playerPid, message)
                            end
