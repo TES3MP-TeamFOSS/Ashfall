@@ -7,7 +7,7 @@ An experimental translation module to send and receive messages in a preferred l
 ```Lua
 config.url = "http://localhost:8000/"
 ```
-This settings can be used to integrate BabelFish into your own module. But you have to make sure that the BabelFish module is loaded first. The translated string is stored in the global Data table: `Data.BabelFishMessage`.
+The following settings can be used to integrate BabelFish into your own module. But you have to make sure that the BabelFish module is loaded first. The translated string is stored in the global Data table: `Data.BabelFishMessage`.
 ```Lua
 config.forceSpecificTranslation = false
 config.forcedLanguage = "en"
