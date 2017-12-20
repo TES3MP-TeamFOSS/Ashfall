@@ -21,7 +21,7 @@ be found in the `0.6.1` subdirectory.
 ## Module overview
 
 | Name              | Description                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------- |
+| :---------------- | :-------------------------------------------------------------------------------------------------------------- |
 | BabelFish         | An experimental translation module to send and receive messages in a preferred language using Google Translate. |
 | DynamicDifficulty | A module that increases the difficulty linearly based on player level.                                          |
 | HardcoreMode      | A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.             |
@@ -36,26 +36,26 @@ be found in the `0.6.1` subdirectory.
 
 ## Other open source TES3MP repositories
 
-| Name                                                                                          | Type                   |
-| --------------------------------------------------------------------------------------------- | ---------------------- |
-| [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.1)            |
-| [SkotisVarvikas/TES3MP-Stuffs](https://github.com/SkotisVarvikas/TES3MP-Stuffs)               | Lua (0.6.1)            |
-| [TES3MP-TeamFOSS/LiveMap](https://github.com/TES3MP-TeamFOSS/LiveMap)                         | Lua / JavaScript / PHP |
-| [Texafornian/mwTDM-0.6.1](https://github.com/Texafornian/mwTDM-0.6.1)                         | Lua (0.6.1)            |
-| [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            |
-| [Texafornian/TCC-0.6.1](https://github.com/Texafornian/TCC-0.6.1)                             | Lua (0.6.1)            |
-| [Texafornian/TES3MP-Server-Stats](https://github.com/Texafornian/TES3MP-Server-Stats)         | Python                 |
-| [vertchrite/tes3mp-check](https://github.com/vertchrite/tes3mp-check)                         | Bash                   |
-| [vertchrite/tes3mp-command-pack](https://github.com/vertchrite/tes3mp-command-pack)           | Lua (0.6.1)            |
-| [vertchrite/tes3mp-disable-assassins](https://github.com/vertchrite/tes3mp-disable-assassins) | Lua (0.6.1)            |
-| [vertchrite/tes3mp-playercells](https://github.com/vertchrite/tes3mp-playercells)             | Lua (0.6.1)            |
+| Name                                                                                          | Type                   | Author                                                |
+| :-------------------------------------------------------------------------------------------- | :--------------------- | :---------------------------------------------------- |
+| [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.1)            | [Atkana](https://github.com/Atkana)                   |
+| [SkotisVarvikas/TES3MP-Stuffs](https://github.com/SkotisVarvikas/TES3MP-Stuffs)               | Lua (0.6.1)            | [SkotisVarvikas](https://github.com/SkotisVarvikas)   |
+| [TES3MP-TeamFOSS/LiveMap](https://github.com/TES3MP-TeamFOSS/LiveMap)                         | Lua / JavaScript / PHP | [TES3MP-TeamFOSS](https://github.com/TES3MP-TeamFOSS) |
+| [Texafornian/mwTDM-0.6.1](https://github.com/Texafornian/mwTDM-0.6.1)                         | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
+| [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
+| [Texafornian/TCC-0.6.1](https://github.com/Texafornian/TCC-0.6.1)                             | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
+| [Texafornian/TES3MP-Server-Stats](https://github.com/Texafornian/TES3MP-Server-Stats)         | Python                 | [Texafornian](https://github.com/Texafornian)         |
+| [vertchrite/tes3mp-check](https://github.com/vertchrite/tes3mp-check)                         | Bash                   | [vertchrite](https://github.com/vertchrite)           |
+| [vertchrite/tes3mp-command-pack](https://github.com/vertchrite/tes3mp-command-pack)           | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
+| [vertchrite/tes3mp-disable-assassins](https://github.com/vertchrite/tes3mp-disable-assassins) | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
+| [vertchrite/tes3mp-playercells](https://github.com/vertchrite/tes3mp-playercells)             | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
 
 ## Credits
 
 ### Localisation
 
 | Language   | Author                                                |
-| ---------- | ----------------------------------------------------- |
+| :--------- | :---------------------------------------------------- |
 | Danish     | Emil                                                  |
 | Dutch      | [Max van der Sluis](https://github.com/1338)          |
 | German     | [Michael Fitzmayer](https://github.com/mupfelofen-de) |
