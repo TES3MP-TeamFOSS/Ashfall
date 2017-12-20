@@ -40,5 +40,11 @@
     "langSet": "Linguagem alterada para",
     "modName": "Sistema de Localização",
     "featureDisabled": "Funcionalidade indisponível"
+  },
+  "ru": {
+    "close": "Закрыть",
+    "langSet": "Язык изменен на",
+    "modName": "Система локализации",
+    "featureDisabled": "Функция отключена"
   }
 }

@@ -62,4 +62,4 @@ be found in the `0.6.1` subdirectory.
 | English    | [Michael Fitzmayer](https://github.com/mupfelofen-de) |
 | French     | Nwah                                                  |
 | Portuguese | [Grim Kriegor](https://github.com/GrimKriegor)        |
-| Russian    | [scorpy](http://morrowindonline.ru/) and Воробей      |
+| Russian    | urm                                                   |

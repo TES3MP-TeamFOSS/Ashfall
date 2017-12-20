@@ -25,5 +25,9 @@
   "pt": {
     "close": "Fechar",
     "disable": "Desactivar"
+  },
+  "ru": {
+    "close": "Закрыть",
+    "disable": "Отключить"
   }
 }

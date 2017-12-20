@@ -26,5 +26,9 @@
   "pt": {
     "close": "Fechar",
     "warning": "O servidor vai entrar em modo de manutenção. Serás desconectado dentro de 10 segundos."
+  },
+  "ru": {
+    "close": "Закрыть",
+    "warning": "Сервер переходит в режим техобслуживания. Вы будете отключены в течение 10 секунд."
   }
 }

@@ -54,5 +54,13 @@
     "newBankAccount": "Uma nova conta foi aberta",
     "paymentContinued": "O pagamento vai continuar",
     "paymentStopped": "O pagamento foi parado por inatividade"
+  },
+  "ru": {
+    "accountBalance": "Баланс счета",
+    "close": "Закрыть",
+    "currencyName": "Золото",
+    "newBankAccount": "Вы открылы новый счет в банке",
+    "paymentContinued": "Оплата будет продолжена",
+    "paymentStopped": "Оплата была прекращена всвязи с неактивностью"
   }
 }
