@@ -31,7 +31,11 @@
     "optout": "Vos messages ne sont plus traduit"
   },
   "nl": {
-    "close": "Sluit"
+    "close": "Sluit",
+    "disabled": "Vertaler uitgezet.",
+    "enabled": "Vertaler aangezet",
+    "optin": "Je berichten mogen nu vertaalt worden.",
+    "optout": "Je berichten mogen nu niet meer vertaalt worden."
   },
   "pt": {
     "close": "Fechar"
