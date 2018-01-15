@@ -53,6 +53,8 @@ Methods.Drop = function(pid)
 
         Players[pid].data.inventory[index] = nil
     end
+    
+    Players[pid].data.equipment = {}
 
     Players[pid]:Save()
     Players[pid]:LoadInventory()
