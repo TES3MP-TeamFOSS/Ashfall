@@ -286,7 +286,7 @@ local function sendMailMessage(mdata)
       for index, item in ipairs(mdata.attachments) do
         sendPlayer.data.inventory[item.slotId].count = sendPlayer.data.inventory[item.slotId].count - item.count
         -- If the item count is now 0 (or somehow less). remove the entry from the player's inventory
-        if sendPlayer.data.inventory[item.slotId].count > 1 then
+        if sendPlayer.data.inventory[item.slotId].count < 1 then
           sendPlayer.data.inventory[item.slotId] = nil
         end
       end
