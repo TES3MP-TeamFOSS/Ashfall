@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ MaintenanceMode = require("MaintenanceMode") ] to the top of server.lua
