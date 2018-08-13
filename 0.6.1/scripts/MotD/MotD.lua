@@ -9,7 +9,7 @@
 require("color")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ MotD = require("MotD") ] to the top of myMod.lua
