@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ DeathDrop = require("DeathDrop") ] to the top of myMod.lua
