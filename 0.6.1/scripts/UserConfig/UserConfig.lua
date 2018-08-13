@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 local userConfigPath = "/path/to/user_config/"

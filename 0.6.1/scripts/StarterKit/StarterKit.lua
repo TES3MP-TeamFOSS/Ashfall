@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Put [ StarterKit = require("StarterKit")] somewhere at the top of myMod.lua

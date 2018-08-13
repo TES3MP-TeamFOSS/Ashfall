@@ -8,7 +8,7 @@
 
 require("color")
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ HardcoreMode = require("HardcoreMode") ] to the top of myMod.lua

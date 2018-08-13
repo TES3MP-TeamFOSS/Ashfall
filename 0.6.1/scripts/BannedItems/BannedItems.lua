@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ BannedItems = require("BannedItems") ] to the top of myMod.lua

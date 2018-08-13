@@ -9,7 +9,7 @@
 require("config")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ DynamicDifficulty = require("DynamicDifficulty") ] to the top of server.lua

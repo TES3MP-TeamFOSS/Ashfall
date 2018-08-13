@@ -11,7 +11,7 @@ http = require("socket.http")
 ltn12 = require("ltn12")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ GeoLocation = require("GeoLocation") ] to the top of server.lua
