@@ -44,7 +44,7 @@ be found in the `0.6.1` subdirectory.
 | [David-AW/Repos](https://github.com/David-AW?tab=repositories)		  				        | Lua (0.6.2)            | [David-AW](https://github.com/David-AW)         		 |
 | [Schnibbsel/TES3MP-Pants](https://github.com/Schnibbsel/TES3MP-Pants)                         | Lua (0.7.0)            | [Schnibbsel](https://github.com/Schnibbsel)           |
 | [Texafornian/ccSuite](https://github.com/Texafornian/TCC-0.6.1)                               | Lua (0.6.2)            | [Texafornian](https://github.com/Texafornian)         |
-| [NicholasAH/Repos](https://github.com/NicholasAH?tab=repositories)		     			    | Lua (0.6.2)            | [NicholasAH](https://github.com/NicholasAH      		 |
+| [NicholasAH/Repos](https://github.com/NicholasAH?tab=repositories)		     			    | Lua (0.6.2)            | [NicholasAH](https://github.com/NicholasAH)      		 |
 | [TES3MP-TeamFOSS/LiveMap](https://github.com/TES3MP-TeamFOSS/LiveMap)                         | Lua / JavaScript / PHP | [TES3MP-TeamFOSS](https://github.com/TES3MP-TeamFOSS) |
 | [Texafornian/mwTDM-0.6.1](https://github.com/Texafornian/mwTDM-0.6.1)                         | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
