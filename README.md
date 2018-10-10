@@ -38,18 +38,19 @@ be found in the `0.6.1` subdirectory.
 
 | Name                                                                                          | Type                   | Author                                                |
 | :-------------------------------------------------------------------------------------------- | :--------------------- | :---------------------------------------------------- |
-| [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.1)            | [Atkana](https://github.com/Atkana)                   |
-| [Schnibbsel/TES3MP-Pants](https://github.com/Schnibbsel/TES3MP-Pants)                            | Lua (0.6.2)            | [Schnibbsel](https://github.com/Schnibbsel)                   |
-| [Skvysh/TES3MP-Stuffs](https://github.com/Skvysh/TES3MP-Scripts/)                             | Lua (0.6.2)            | [Skvysh](https://github.com/Skvysh)              |
+| [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.2)            | [Atkana](https://github.com/Atkana)                   |
+| [RickOff/Ecarlate](https://github.com/rickoff/Tes3mp-Ecarlate-Script)       				    | Lua (0.6.2)            | [RickOff](https://morrowindserveurfr.wixsite.com/ecarlates) |
+| [Skvysh/TES3MP-Stuffs](https://github.com/Skvysh/TES3MP-Scripts/)                             | Lua (0.6.2)            | [Skvysh](https://github.com/Skvysh)          		 |
+| [David-AW/Repos](https://github.com/David-AW?tab=repositories)		  				        | Lua (0.6.2)            | [David-AW](https://github.com/David-AW)         		 |
+| [Schnibbsel/TES3MP-Pants](https://github.com/Schnibbsel/TES3MP-Pants)                         | Lua (0.7.0)            | [Schnibbsel](https://github.com/Schnibbsel)           |
+| [Texafornian/ccSuite](https://github.com/Texafornian/TCC-0.6.1)                               | Lua (0.6.2)            | [Texafornian](https://github.com/Texafornian)         |
+| [NicholasAH/Repos](https://github.com/NicholasAH?tab=repositories)		     			    | Lua (0.6.2)            | [NicholasAH](https://github.com/NicholasAH      		 |
 | [TES3MP-TeamFOSS/LiveMap](https://github.com/TES3MP-TeamFOSS/LiveMap)                         | Lua / JavaScript / PHP | [TES3MP-TeamFOSS](https://github.com/TES3MP-TeamFOSS) |
 | [Texafornian/mwTDM-0.6.1](https://github.com/Texafornian/mwTDM-0.6.1)                         | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
-| [Texafornian/TCC-0.6.1](https://github.com/Texafornian/TCC-0.6.1)                             | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/TES3MP-Server-Stats](https://github.com/Texafornian/TES3MP-Server-Stats)         | Python                 | [Texafornian](https://github.com/Texafornian)         |
-| [vertchrite/tes3mp-check](https://github.com/vertchrite/tes3mp-check)                         | Bash                   | [vertchrite](https://github.com/vertchrite)           |
-| [vertchrite/tes3mp-command-pack](https://github.com/vertchrite/tes3mp-command-pack)           | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
-| [vertchrite/tes3mp-disable-assassins](https://github.com/vertchrite/tes3mp-disable-assassins) | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
-| [vertchrite/tes3mp-playercells](https://github.com/vertchrite/tes3mp-playercells)             | Lua (0.6.1)            | [vertchrite](https://github.com/vertchrite)           |
+
+
 
 ## Credits
 
