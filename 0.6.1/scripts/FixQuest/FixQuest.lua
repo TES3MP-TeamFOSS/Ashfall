@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ FixQuest = require("FixQuest") ] to the top of server.lua

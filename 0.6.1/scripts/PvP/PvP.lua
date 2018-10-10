@@ -9,7 +9,7 @@
 require("color")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ PvP = require("PvP") ] to the top of myMod.lua

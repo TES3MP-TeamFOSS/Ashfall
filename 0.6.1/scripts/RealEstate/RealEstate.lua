@@ -9,7 +9,7 @@
 json = require("dkjson")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ RealEstate = require("RealEstate") ] to the top of server.lua

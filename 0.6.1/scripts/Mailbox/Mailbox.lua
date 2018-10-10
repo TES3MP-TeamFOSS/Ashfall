@@ -9,7 +9,7 @@
 require("color")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ Mailbox = require("Mailbox") ] to the top of server.lua

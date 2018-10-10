@@ -10,7 +10,7 @@ require("color")
 require("irc")
 
 
-Methods = {}
+local Methods = {}
 
 
 -- Add [ IrcBridge = require("IrcBridge") ] to the top of server.lua
