@@ -45,6 +45,7 @@ You find a basic Guide on how to port scripts [with this link](https://github.co
 | [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.2)            | [Atkana](https://github.com/Atkana)                   |
 | [Boyos999/tes3mpScripts](https://github.com/Boyos999/tes3mpScripts)         | Python                 | [Boyos](https://github.com/Boyos999)         |
 | [David-AW/Repos](https://github.com/David-AW?tab=repositories)		  				        | Lua (0.6.2)            | [David-AW](https://github.com/David-AW)         		 |
+| [Jerthebear/TES3MP-Scripts](https://github.com/Jerthebear/Tes3mp-Scripts)         | Lua (0.7.0)                 | [JerTheBear](https://github.com/Jerthebear)         |
 | [Nater/Repos](https://github.com/rnate)         | Python                 | [Nater](https://github.com/rnate)         |
 | [NicholasAH/Repos](https://github.com/NicholasAH?tab=repositories)		     			    | Lua (0.6.2)            | [NicholasAH](https://github.com/NicholasAH)      		 |
 | [Uramer/TES3MP-Scripts](https://github.com/uramer/Tes3MP-Scripts)         | Lua (0.7.0)                 | [Urm](https://github.com/uramer)         |
