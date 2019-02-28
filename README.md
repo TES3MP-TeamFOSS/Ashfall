@@ -7,16 +7,20 @@ free to join us on our official [Discord Server](https://discord.gg/uFCN6GP).
 
 ## Note
 
-These scripts are intended to use with version `0.7.0-alpha` and are
+These scripts are intended to use with version `0.7.0-alpha` (not "prerelease") and are
 therefore for testing purposes only. All scripts for version `0.6.1` can
 be found in the `0.6.1` subdirectory.
+
+There are no scripts for the current release `0.7.0-prelease` in this repository.
+You find a basic Guide on how to port scripts [with this link](https://github.com/Atkana/tes3mp-scripts/blob/master/Porting%20Scripts%20to%200.7%20alpha%20and%20How%20Does.md).
 
 ## Installation instructions
 
 1. Copy the contents of `lib` into your `CoreScripts/lib` directory.
 2. Place your favoured modules in `CoreScripts/modules`.
 3. Some modules require additional data files. Copy these files into `CoreScripts/data`.
-4. Enjoy!
+4. Follow additional install instructions inside the files.
+5. Enjoy!
 
 ## Module overview
 
