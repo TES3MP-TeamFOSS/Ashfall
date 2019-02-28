@@ -39,9 +39,13 @@ be found in the `0.6.1` subdirectory.
 | Name                                                                                          | Type                   | Author                                                |
 | :-------------------------------------------------------------------------------------------- | :--------------------- | :---------------------------------------------------- |
 | [Atkana/tes3mp-scripts](https://github.com/Atkana/tes3mp-scripts/)                            | Lua (0.6.2)            | [Atkana](https://github.com/Atkana)                   |
+| [Boyos999/tes3mpScripts](https://github.com/Boyos999/tes3mpScripts)         | Python                 | [Boyos](https://github.com/Boyos999)         |
 | [David-AW/Repos](https://github.com/David-AW?tab=repositories)		  				        | Lua (0.6.2)            | [David-AW](https://github.com/David-AW)         		 |
+| [Nater/Repos](https://github.com/rnate)         | Python                 | [Nater](https://github.com/rnate)         |
 | [NicholasAH/Repos](https://github.com/NicholasAH?tab=repositories)		     			    | Lua (0.6.2)            | [NicholasAH](https://github.com/NicholasAH)      		 |
+| [Uramer/TES3MP-Scripts](https://github.com/uramer/Tes3MP-Scripts)         | Python                 | [Urm](https://github.com/uramer)         |
 | [RickOff/Ecarlate](https://github.com/rickoff/Tes3mp-Ecarlate-Script)       				    | Lua (0.6.2)            | [RickOff](https://morrowindserveurfr.wixsite.com/ecarlates) |
+| [SaintWish/ScriptLoader](https://github.com/SaintWish/tes3mp_scriptloader)         | Python                 | [Wishbone](https://github.com/SaintWish/)         |
 | [Schnibbsel/TES3MP-Pants](https://github.com/Schnibbsel/TES3MP-Pants)                         | Lua (0.7.0)            | [Schnibbsel](https://github.com/Schnibbsel)           |
 | [Skvysh/TES3MP-Stuffs](https://github.com/Skvysh/TES3MP-Scripts/)                             | Lua (0.6.2)            | [Skvysh](https://github.com/Skvysh)          		 |
 | [TES3MP-TeamFOSS/LiveMap](https://github.com/TES3MP-TeamFOSS/LiveMap)                         | Lua / JavaScript / PHP | [TES3MP-TeamFOSS](https://github.com/TES3MP-TeamFOSS) |
@@ -49,7 +53,6 @@ be found in the `0.6.1` subdirectory.
 | [Texafornian/mwTDM-0.6.1](https://github.com/Texafornian/mwTDM-0.6.1)                         | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/TES3MP-Server-Stats](https://github.com/Texafornian/TES3MP-Server-Stats)         | Python                 | [Texafornian](https://github.com/Texafornian)         |
-
 
 
 ## Credits
