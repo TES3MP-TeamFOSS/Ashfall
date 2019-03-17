@@ -22,6 +22,10 @@ Requires a CoreScripts version that supports event hooks.
 
         IrcListener = require("IrcListener")
 
+1. Add the following to `CoreScripts/serverCore.lua`, directly beneath `function UpdateTime()`):
+
+        IrcListener.RecvMessage()
+
 1. Add the following to `CoreScripts/customScripts.lua`:
 
         require("IrcBridge")
