@@ -59,6 +59,9 @@ You find a basic Guide on how to port scripts [with this link](https://github.co
 | [Texafornian/Plugins-0.6.1](https://github.com/Texafornian/Plugins-0.6.1)                     | Lua (0.6.1)            | [Texafornian](https://github.com/Texafornian)         |
 | [Texafornian/TES3MP-Server-Stats](https://github.com/Texafornian/TES3MP-Server-Stats)         | Python                 | [Texafornian](https://github.com/Texafornian)         |
 
+## Development
+
+Using [Luacheck](https://github.com/mpeterv/luacheck/blob/master/README.md#installation) with the included [`luacheckrc`](luacheckrc) file is recommended when developing scripts in this repository (it should also be useful for any other TES3MP repository.)
 
 ## Credits
 
