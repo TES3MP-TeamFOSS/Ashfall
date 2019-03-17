@@ -16,7 +16,7 @@ Requires a CoreScripts version that supports event hooks.
 
 1. Copy [`IrcBridge.lua`](IrcBridge.lua) to `CoreScripts/scripts/`.  Symlinks are OK.
 
-1. Configure 
+1. Configure [your bot settings](IrcBridge/IrcBridge.lua#L11-L15).
 
 1. Add the following to the top of `CoreScripts/serverCore.lua` (beneath `require("customScripts")`):
 
