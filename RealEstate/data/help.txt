@@ -1,0 +1,7 @@
+#FF8C00Real estate system - HELP
+
+#FA8072/house buy#FFFFFF - Buy house.
+#FA8072/house add "[name]"#FFFFFF - Add guest.
+#FA8072/house remove "[name]"#FFFFFF - Remove guest.
+#FA8072/house guests#FFFFFF - Show guests.
+#FA8072/house lock#FFFFFF - Lock/Unlock your house.

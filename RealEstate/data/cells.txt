@@ -1,0 +1,151 @@
+Abandoned Flat:34000000
+Ahemmusa Camp, Addammus's Yurt:250000
+Ahemmusa Camp, Ashkhan's Yurt:250000
+Ahemmusa Camp, Nummu's Yurt:250000
+Ald Velothi, Fevila Bethrano's Shack:400000
+Ald Velothi, Ganus Lloryn's Shack:400000
+Ald Velothi, Ienas Arvel's Shack:400000
+Ald Velothi, Lledsea Relas's Shack:400000
+Ald Velothi, Llerar Vinden's Shack:400000
+Ald Velothi, Sathas Rivul's Shack:400000
+Ald Velothi, Vireveri Darethran's Shack:400000
+Ald-ruhn, Aryni Orethi's House:850000
+Ald-ruhn, Braynas Hlervu's House:850000
+Ald-ruhn, Galthragoth's House:850000
+Ald-ruhn, Gindrala Hleran's House:850000
+Ald-ruhn, Guard Tower 1:1000000
+Ald-ruhn, Guard Tower 2:1000000
+Ald-ruhn, Ilmiril's House:850000
+Ald-ruhn, Pellecia Aurrus's House:850000
+Ald-ruhn, Tauryon's House:850000
+Ald-ruhn, Venim Manor Bedrooms:2000000
+An Abandoned Shack:300000
+Arrow, Cabin:300000
+Arvel Manor:2000000
+Balmora, Astius Hanotepelus' House:900000
+Balmora, Dralcea Arethi's House:900000
+Balmora, Dralosa Athren's House:900000
+Balmora, Itan's House:900000
+Balmora, Karlirah's House:900000
+Balmora, Rarayn Radarys' House:900000
+Balmora, Vori's House:900000
+Balmora, Western Guard Tower North:1200000
+Balmora, Western Guard Tower South:1200000
+Caldera, Dro'Shavir's House:700000
+Caldera, Keel-Raniur's House:700000
+Caldera, Mining Bunkhouse:1500000
+Caldera, North Guard Towers:900000
+Caldera, Odairan Ashummi-Ammus' House:700000
+Caldera, South Guard Towers:900000
+Caldera, Valvius Mevureius' House:700000
+Chun-Ook, Cabin:300000
+Dagon Fel, Anja Swift-Sailer's House:450000
+Dagon Fel, Fanar Fork-Beard's House:450000
+Dagon Fel, Fjorrod's House:450000
+Dagon Fel, Hurg's House:450000
+Dagon Fel, Itar the Gentle's House:450000
+Dagon Fel, Mette's House:450000
+Dagon Fel, Onmi Hard-mouth's House:450000
+Dagon Fel, Watch Tower:700000
+Dren Plantation, Guardhouse:900000
+Dren Plantation, Helvi's Shack:350000
+Dren Plantation, Hlevala's Shack:350000
+Dren Plantation, Rethan's Shack:350000
+Dren Plantation, Shipping House:800000
+Dren Plantation, Tower Shack:350000
+Ebonheart, East Empire North Warehouse:400000
+Ebonheart, East Empire South Warehouse:800000
+Ebonheart, Hawkmoth Towers:700000
+Elf-Skerring, Cabin:300000
+Fair Helas, Cabin:3000000
+Fair Helas, Lower Level:850000
+Fair Helas, Upper Level:850000
+Gnaar Mok, Mush-Mere's Shack:500000
+Gnaar Mok, Rostlogi's Shack:500000
+Gnisis, Almu Cave Dwelling:600000
+Gnisis, Dinadad Hut:700000
+Gnisis, Man-llu Hut:700000
+Gnisis, Mantiti Cave Dwelling:600000
+Gnisis, Shand Hut:700000
+Gnisis, Shishara Hut:700000
+Gnisis, Yahaz Hut:700000
+Hla Oad, Fadila Balvel's House:500000
+Hla Oad, Relien Rirne's House:500000
+Hla Oad, Shurkul gro-Sharga's House:500000
+Khuul, Aldi's Shack:500000
+Khuul, Brurid's Shack:500000
+Khuul, Endris Dilmyn's Shack:500000
+Khuul, Helga's Shack:500000
+Khuul, Miron Garer's Shack:500000
+Khuul, Nelmyne Andules's Shack:500000
+Khuul, Rivame Samandas's Shack:500000
+Khuul, Svadstar's Shack:500000
+Maar Gan, Assi Serimilk's Hut:700000
+Maar Gan, Assirari Zama-Rasour's Hut:700000
+Maar Gan, Garry's Hut:1000000
+Maar Gan, Guard Tower 1:900000
+Maar Gan, Guard Tower 2:900000
+Maar Gan, Guard Tower 3:900000
+Maar Gan, Kind Erushara's Hut:700000
+Maar Gan, Mabrelle Geles's Hut:700000
+Maar Gan, Shilipuran Zama-Rasour's Hut:700000
+Maar Gan, Ulisamsi Shaddarnuran's Hut:700000
+Maar Gan, Yeherradad's Hut:700000
+Nilera's Farmhouse:450000
+Pelagiad, Dralas Gilu's House:650000
+Pelagiad, Erval's House:650000
+Pelagiad, Farusea Salas' House:650000
+Pelagiad, Guard Tower:1000000
+Pelagiad, Junal-lei's House:650000
+Pelagiad, Madres Navur's House:650000
+Pelagiad, Murberius Harmevus' House:650000
+Pelagiad, North Wall:2000000
+Sadrith Mora, Hleras Gidren's House:600000
+Sadrith Mora, Madran Ulvel's House:600000
+Sadrith Mora, Meluria Seleth's House:600000
+Sadrith Mora, Milara Vedran's House:600000
+Sadrith Mora, Nirasa Aren's House:600000
+Sadrith Mora, Trendrus Dral's House:600000
+Sadrith Mora, Urtisa Romayn's House:600000
+Sadrith Mora, Vaden Belas' House:600000
+Seyda Neen, Draren Thiralas' House:650000
+Seyda Neen, Eldafire's House:750000
+Seyda Neen, Erene Llenim's Shack:650000
+Seyda Neen, Fine-Mouth's Shack:650000
+Seyda Neen, Indrele Rathryon's Shack:650000
+Seyda Neen, Terurise Girvayne's House:650000
+Seyda Neen, Vodunius Nuccius' House:750000
+Skaal Village, Ingmar's House:800000
+Solstheim, Graring's House:700000
+Tel Branora, Ervyna Hlervu's Shack:450000
+Tel Branora, Fedar Davus's House:500000
+Tel Branora, Giron Manas's Shack:450000
+Tel Branora, Manos Vavyn's House:450000
+Tel Mora, Kirsty's House:500000
+Vivec, Hlaren Residence:750000
+Vivec, St. Delyn Canal North-One:450000
+Vivec, St. Delyn Canal North-Three:450000
+Vivec, St. Delyn Canal South-Three:450000
+Vivec, St. Delyn Waist North-One:400000
+Vivec, St. Delyn Waist North-Two:500000
+Vivec, St. Delyn Waist South-One:500000
+Vivec, St. Delyn Waist South-Two:450000
+Vivec, St. Olms Canal North-Three:450000
+Vivec, St. Olms Canal North-Two:500000
+Vivec, St. Olms Upper North-One:500000
+Vivec, St. Olms Upper South-One:500000
+Vivec, St. Olms Waist North-One:450000
+Vivec, St. Olms Waist North-Two:500000
+Vivec, St. Olms Waist South-Two:450000
+Vos, Dreynos Elvul's Farmhouse:600000
+Vos, Fanisea Irano's Farmhouse:600000
+Vos, Fanisea Irano's Farmhouse:600000
+Vos, Ienasa Radas's Farmhouse:600000
+Vos, Maela Kaushad's Farmhouse:600000
+Vos, Mandyn Ralas's Farmhouse:600000
+Vos, Menus Felas's Farmhouse:600000
+Vos, Runethyne Andas's Farmhouse:600000
+Vos, Thilse Aralas's Farmhouse:600000
+Vos, Trilam Drolnor's Farmhouse:600000
+Vos, Ulvil Llothas's Farmhouse:600000
+Yakaridan Camp, Kitbael's Yurt:250000
