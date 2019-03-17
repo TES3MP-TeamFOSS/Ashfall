@@ -1,7 +1,0 @@
-#FF8C00Mailbox system - HELP
-
-#FA8072/mailbox#FFFFFF - Read messages (GUI).
-#FA8072/mailbox check#FFFFFF - Check your inbox's message count.
-#FA8072/mailbox delete [id]#FFFFFF - Delete message (id 0 for all).
-#FA8072/mailbox read [id]#FFFFFF - Read message (id 0 for all).
-#FA8072/mailbox send "[name]" "[message]"#FFFFFF - Send message.

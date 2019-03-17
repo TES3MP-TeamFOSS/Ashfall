@@ -1,7 +1,0 @@
-#FF8C00Ejendomssystem - HJÆLP
-
-#FA8072/house#FFFFFF - Vis brugergrænseflade.
-#FA8072/house add "[name]"#FFFFFF - Tilføj gæst.
-#FA8072/house remove "[name]"#FFFFFF - Fjern gæst.
-#FA8072/house guests#FFFFFF - Vis gæster.
-#FA8072/house lock#FFFFFF - Aflås/lås op for dit hus.

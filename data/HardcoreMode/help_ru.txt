@@ -1,4 +1,0 @@
-#FF8C00Хардкорный режим - ПОМОЩЬ
-
-#FA8072/hardcore toggle#FFFFFF - Включить/выключить хардкор.
-#FA8072/hardcore ladder#FFFFFF - Показать рейтинг.

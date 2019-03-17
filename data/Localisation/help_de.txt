@@ -1,4 +1,0 @@
-#FF8C00Lokalisierungs-System - Hilfe
-
-#FA8072/lang set [lang]#FFFFFF - Einstellen der Sprache.
-#FA8072/lang auto#FFFFFF - Automatikmodus An/Aus.

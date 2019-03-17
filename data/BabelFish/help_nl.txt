@@ -1,6 +1,0 @@
-#FF8C00Vertaler - HELP
-
-#FFFFFFSDeze vertaler kan gebruikt worden om berichten te ontvangen en versturen in de taal van jouw voorkeur. Jou berichten worden alleen vertaalt als de ander ook expliciet aangegeven heeft dat diegene dat wil. 
-
-#FA8072/babelfish#FFFFFF - Zet vertaal modus aan/uit.
-#FA8072/babelfish permissie#FFFFFF - Opt-in/out.

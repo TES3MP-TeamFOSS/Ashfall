@@ -1,4 +1,0 @@
-#FF8C00Hardcore-Modus - HILFE
-
-#FA8072/hardcore toggle#FFFFFF - Modus aktivieren/deaktivieren.
-#FA8072/hardcore ladder#FFFFFF - Zeige Rangliste.

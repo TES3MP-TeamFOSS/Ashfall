@@ -1,5 +1,0 @@
-#FF8C00Pankkijärjestelmä - APUA
-
-#FFFFFFPankkijärjestelmän tarkoitus on pitää silmällä sijoitettuja Drakejasi. Järjestelmä käyttää muokattuja Drakeja joita syntyy aktiivisella pelaamisella ajan myötä.
-
-#FA8072/vd show#FFFFFF - Näytä pankkitili.

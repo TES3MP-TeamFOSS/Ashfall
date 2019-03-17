@@ -1,4 +1,0 @@
-#FF8C00Hardcore-tilstand - HJÆLP
-
-#FA8072/hardcore toggle#FFFFFF - Skift til hardcore-tilstand.
-#FA8072/hardcore ladder#FFFFFF - Vis rangliste.

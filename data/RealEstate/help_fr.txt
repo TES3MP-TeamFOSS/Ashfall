@@ -1,7 +1,0 @@
-#FF8C00Système immobilier - AIDE
-
-#FA8072/house#FFFFFF - Montrer l'IUG.
-#FA8072/house add "[name]"#FFFFFF - Ajouter des invités.
-#FA8072/house remove "[name]"#FFFFFF - Retirer des invités.
-#FA8072/house guests#FFFFFF - Montrer les invités.
-#FA8072/house lock#FFFFFF - Verrouiller/déverrouiller la maison.

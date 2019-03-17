@@ -1,6 +1,0 @@
-#FF8C00Oversætter - HJÆLP
-
-#FFFFFFDenne oversætter kan blive brugt til at sende og modtage beskeder i dit foretrukne sprog. Dine beskeder vil kun blive oversat for andre når du tilmelder dig.
-
-#FA8072/babelfish#FFFFFF - Sæt oversætter-tilstand til/fra.
-#FA8072/babelfish opt#FFFFFF - Tilmeld/afmeld.

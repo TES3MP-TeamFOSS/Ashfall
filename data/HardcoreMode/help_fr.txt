@@ -1,4 +1,0 @@
-#FF8C00 Mode hardcore - AIDE
-
-#FA8072/hardcore toggle#FFFFFF - Activer le mode hardcore.
-#FA8072/hardcore ladder#FFFFFF - Montrer le classement.

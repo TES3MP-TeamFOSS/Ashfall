@@ -1,5 +1,0 @@
-#FF8C00Système bancaire - AIDE
-
-#FFFFFFLe but du système bancaire est de garder une trace des Drakes que vous avez investi. Une monnaie alternative qui, contrairement aux Drakes normaux, est générée par votre activité en jeu.
-
-#FA8072/vd show#FFFFFF - Montrer le compte.

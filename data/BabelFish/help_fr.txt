@@ -1,6 +1,0 @@
-#FF8C00Traducteur - AIDE
-
-#FFFFFFCe traducteur peut être utilisé pour envoyer et recevoir des messages dans la langue que vous souhaitez. Les messages que vous envoyez seront traduit chez les autres joueurs uniquement si vous leur en donner la permission.
-
-#FA8072/babelfish#FFFFFF - Activer/désactiver le mode de traduction.
-#FA8072/babelfish opt#FFFFFF - Donner/retirer sa permission.

@@ -1,7 +1,0 @@
-root = 0.6.1-server/keepers/QueuedScripts/scripts/
-root = 0.6.1-server/keepers/CoreScripts/scripts/
-
-confirmbigdel = true
-force = 0.6.1-server/keepers/QueuedScripts/scripts/
-log = false
-silent = true

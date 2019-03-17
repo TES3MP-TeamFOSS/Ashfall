@@ -1,8 +1,0 @@
-#FF8C00Huizingsysteem - HELP
-
-#FA8072/house#FFFFFF - Zie interface.
-#FA8072/house add "[name]"#FFFFFF - Voeg gast toe.
-#FA8072/house remove "[name]"#FFFFFF - Verwijder gast.
-#FA8072/house guests#FFFFFF - Zie gastlijst.
-#FA8072/house lock#FFFFFF - Vergrendel/Ontgrendel huis.
-

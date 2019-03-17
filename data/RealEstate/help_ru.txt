@@ -1,7 +1,0 @@
-#FF8C00Система владения недвижимостью - ПОМОЩЬ
-
-#FA8072/house#FFFFFF - Показать интерфейс.
-#FA8072/house add "[имя]"#FFFFFF - Добавить гостя.
-#FA8072/house remove "[имя]"#FFFFFF - Убрать гостя.
-#FA8072/house guests#FFFFFF - Показать гостей.
-#FA8072/house lock#FFFFFF - Запереть/отпереть Ваш дом.

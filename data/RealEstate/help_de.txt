@@ -1,7 +1,0 @@
-#FF8C00Grundbesitz-Verwaltung - Hilfe
-
-#FA8072/house#FFFFFF - Benutzeroberfläche.
-#FA8072/house add "[name]"#FFFFFF - Gast hinzufügen.
-#FA8072/house remove "[name]"#FFFFFF - Gast entfernen.
-#FA8072/house guests#FFFFFF - Zeige Gästeliste.
-#FA8072/house lock#FFFFFF - Auf-/Zuschließen des Hauses.

@@ -1,7 +1,0 @@
-root = 0.6.1-server/keepers/CoreScripts/data/player/
-root = backups/player/current/
-
-confirmbigdel = false
-force = 0.6.1-server/keepers/CoreScripts/data/player/
-log = false
-silent = true

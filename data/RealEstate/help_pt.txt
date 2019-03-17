@@ -1,7 +1,0 @@
-#FF8C00Sistema Imobiliário - AJUDA
-
-#FA8072/house#FFFFFF - Mostrar interface.
-#FA8072/house add "[name]"#FFFFFF - Adicionar convidado.
-#FA8072/house remove "[name]"#FFFFFF - Remover convidado.
-#FA8072/house guests#FFFFFF - Mostrar lista de convidados.
-#FA8072/house lock#FFFFFF - Trancar ou destrancar casa.

@@ -1,8 +1,0 @@
-{
-    "name": "UserConfig",
-    "author": "Michael Fitzmayer",
-    "version": "0.0.1",
-    "dependencies": {
-        "Core": ">=0.0.1"
-    }
-}

@@ -1,6 +1,0 @@
-#FF8C00Übersetzer - HILFE
-
-#FFFFFFDieser Übersetzer kann dazu verwendet werden, um Nachrichten in einer bevorzugten Sprache zu senden und zu empfangen. Deine Nachrichten werden für andere nur dann übersetzt, wenn du dich explizit dafür angemeldet hast.
-
-#FA8072/babelfish#FFFFFF - Übersetzer An/Aus.
-#FA8072/babelfish opt#FFFFFF - An-/Abmelden.
