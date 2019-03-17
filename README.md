@@ -29,7 +29,7 @@ You find a basic Guide on how to port scripts [with this link](https://github.co
 | BabelFish         | An experimental translation module to send and receive messages in a preferred language using Google Translate. |
 | DynamicDifficulty | A module that increases the difficulty linearly based on player level.                                          |
 | HardcoreMode      | A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.             |
-| [IrcBridge](IrcBridge)         | A module to bridge IRC (Internet Relay Chat) and the in-game chat.                                              |
+| [IrcBridge](IrcBridge/README.md)         | A module to bridge IRC (Internet Relay Chat) and the in-game chat.                                              |
 | Localisation      | A localisation modules to add localisation-support to TES3MP-modules.                                           |
 | Mailbox           | A basic Mailbox system.                                                                                         |
 | MaintenanceMode   | A maintenance mode that prevents normal players from joining.                                                   |
