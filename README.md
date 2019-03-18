@@ -12,6 +12,7 @@ Click the name of the module below to see its documentation.  Modules without li
 | Name              | Description                                                                                                     |
 | :---------------- | :-------------------------------------------------------------------------------------------------------------- |
 | BabelFish         | An experimental translation module to send and receive messages in a preferred language using Google Translate. |
+| [BannedItems](BannedItems/README.md)         | Removes "banned" items from a player's inventory or equipment. |
 | DynamicDifficulty | A module that increases the difficulty linearly based on player level.                                          |
 | HardcoreMode      | A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.             |
 | [IrcBridge](IrcBridge/README.md)         | A module to bridge IRC (Internet Relay Chat) and the in-game chat.                                              |
