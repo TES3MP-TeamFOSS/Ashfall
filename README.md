@@ -14,7 +14,7 @@ Click the name of the module below to see its documentation.  Modules without li
 | BabelFish         | An experimental translation module to send and receive messages in a preferred language using Google Translate. |
 | [BannedItems](BannedItems/README.md)         | Removes "banned" items from a player's inventory or equipment. |
 | [DeathDrop](DeathDrop/README.md)         | Causes a player to drop their entire inventory upon death. |
-| DynamicDifficulty | A module that increases the difficulty linearly based on player level.                                          |
+| [DynamicDifficulty](DynamicDifficulty/README.md) | A module that increases the difficulty linearly based on player level.                                          |
 | HardcoreMode      | A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.             |
 | [IrcBridge](IrcBridge/README.md)         | A module to bridge IRC (Internet Relay Chat) and the in-game chat.                                              |
 | Localisation      | A localisation modules to add localisation-support to TES3MP-modules.                                           |
