@@ -6,7 +6,7 @@ Requires a CoreScripts version that supports event hooks.
 
 ## Installation
 
-1. Copy [`RealEstate.lua`](RealEstate.lua) to `CoreScripts/scripts/`.  Symlinks are OK.
+1. Copy [`RealEstate.lua`](RealEstate.lua) to `CoreScripts/scripts/custom/`.  Symlinks are OK.
 
 1. Copy [`data`](data) to `CoreScripts/data/` and rename it to `RealEstate`.  Symlinks are OK.
 

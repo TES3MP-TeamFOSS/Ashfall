@@ -12,9 +12,9 @@ Requires a CoreScripts version that supports event hooks.
 
 1. Copy [`lib/lua/irc.lua`](lib/lua/irc.lua) to `CoreScripts/lib/lua/`.  Symlinks are OK.
 
-1. Copy [`IrcListener.lua`](IrcListener.lua) to `CoreScripts/scripts/`.  Symlinks are OK.
+1. Copy [`IrcListener.lua`](IrcListener.lua) to `CoreScripts/scripts/custom/`.  Symlinks are OK.
 
-1. Copy [`IrcBridge.lua`](IrcBridge.lua) to `CoreScripts/scripts/`.  Symlinks are OK.
+1. Copy [`IrcBridge.lua`](IrcBridge.lua) to `CoreScripts/scripts/custom/`.  Symlinks are OK.
 
 1. Configure [your bot settings](IrcBridge/IrcBridge.lua#L11-L15).
 
