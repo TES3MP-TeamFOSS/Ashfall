@@ -18,6 +18,7 @@ Click the name of the module below to see its documentation.  Modules without li
 | [FixQuest](FixQuest/README.md) | Automatically fix quests that require console intervention.                                          |
 | [FossMail](FossMail/README.md) | A script for sending messages and items between players, regardless of whether they are on/offline, via an ingame GUI.                                          |
 | HardcoreMode      | A mode that makes the death of players semi-permanent by putting them in a seperate afterlife area.             |
+| [GeoLocation](GeoLocation/README.md)      | Store geographical information about players that log in.             |
 | [IrcBridge](IrcBridge/README.md)         | A module to bridge IRC (Internet Relay Chat) and the in-game chat.                                              |
 | Localisation      | A localisation modules to add localisation-support to TES3MP-modules.                                           |
 | Mailbox           | A basic Mailbox system.                                                                                         |
