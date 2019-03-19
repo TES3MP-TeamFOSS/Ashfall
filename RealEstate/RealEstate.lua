@@ -6,7 +6,7 @@
 -- in return.  Michael Fitzmayer
 local RealEstate = {}
 -- TODO: Read the path from a config file.
-local pathData = "../../CoreScripts/data/RealEstate/"
+local pathData = tes3mp.GetModDir() .. "/RealEstate/"
 
 local jsonFileName = "RealEstateOwned.json"
 local basePrice = 500000
