@@ -54,9 +54,7 @@ function IrcBridge.OnPlayerConnect(eventStatus, pid)
 end
 
 function IrcBridge.OnPlayerDisconnect(eventStatus, pid)
-    if not string.match(logicHandler.GetChatName(pid), "Unlogged player") then
-        sendMessage(logicHandler.GetChatName(pid) .. " left the server.\n")
-    end
+   sendMessage(logicHandler.GetChatName(pid) .. " left the server.\n")
 end
 
 function IrcBridge.OnPlayerSendMessage(eventStatus, pid, message)
@@ -66,7 +64,7 @@ function IrcBridge.OnPlayerSendMessage(eventStatus, pid, message)
 end
 
 customEventHooks.registerHandler("OnPlayerConnect", IrcBridge.OnPlayerConnect)
-customEventHooks.registerHandler("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
+customEventHooks.registerValidator("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
 customEventHooks.registerHandler("OnPlayerSendMessage", IrcBridge.OnPlayerSendMessage)
 
 return IrcBridge
