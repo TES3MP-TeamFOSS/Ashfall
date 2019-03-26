@@ -8,6 +8,8 @@ Requires a CoreScripts version that supports event hooks.
 
 1. Copy [`lib/socket`](lib/socket) to `CoreScripts/lib/`.  Symlinks are OK.
 
+1. Copy [`lib/lua/socket.lua`](lib/lua/socket.lua) to `CoreScripts/lib/lua/`.  Symlinks are OK.
+
 1. Copy [`lib/lua/irc`](lib/lua/irc) to `CoreScripts/lib/lua/`.  Symlinks are OK.
 
 1. Copy [`lib/lua/irc.lua`](lib/lua/irc.lua) to `CoreScripts/lib/lua/`.  Symlinks are OK.
