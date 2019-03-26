@@ -6,9 +6,10 @@
 -- in return.  Michael Fitzmayer
 local RealEstate = {}
 -- TODO: Read the path from a config file.
-local pathData = tes3mp.GetModDir() .. "/RealEstate/"
 
-local jsonFileName = "RealEstateOwned.json"
+local cellsTextFile = tes3mp.GetModDir() .. "/custom/RealEstate/cells.txt"
+local helpTextFile = tes3mp.GetModDir() .. "/custom/RealEstate/help.txt"
+local jsonFileName = "custom/RealEstate/RealEstateOwned.json"
 local basePrice = 500000
 
 -- local maxAbandonTime = 336
@@ -20,10 +21,10 @@ local cellMonitorLastVisitTimer = tes3mp.CreateTimerEx("CellMonitorLastVisit", 3
 
 tes3mp.StartTimer(cellMonitorLastVisitTimer)
 
-local storage = jsonInterface.load(pathData .. jsonFileName)
+local storage = jsonInterface.load(jsonFileName)
 
 local function Help(pid)
-    local f = io.open(pathData .. "help.txt", "r")
+    local f = io.open(helpTextFile, "r")
     if f == nil then
         return false
     end
@@ -62,7 +63,7 @@ local function CellUpdateLastVisit(cell)
     end
 
     storage[cell].lastVisit = os.time()
-    jsonInterface.save(pathData .. jsonFileName, storage)
+    jsonInterface.save(jsonFileName, storage)
 end
 
 local function CellRelease(cell)
@@ -70,7 +71,7 @@ local function CellRelease(cell)
         storage[cell] = {}
     end
     storage[cell] = {}
-    jsonInterface.save(pathData .. jsonFileName, storage)
+    jsonInterface.save(jsonFileName, storage)
 end
 
 local function CellGetPlayerCell(pid)
@@ -116,7 +117,7 @@ local function CellGetPrice(cell)
     local tmp = {}
     local hit = false
 
-    local f = io.open(pathData .. "cells.txt", "r")
+    local f = io.open(cellsTextFile, "r")
     if f ~= nil then
         for line in f:lines() do
             table.insert(tmp, line)
@@ -146,7 +147,7 @@ local function CellSetOwner(cell, pid)
     storage[cell].owner = string.lower(tes3mp.GetName(pid))
     storage[cell].isUnlocked = false
     storage[cell].lastVisit = os.time()
-    jsonInterface.save(pathData .. jsonFileName, storage)
+    jsonInterface.save(jsonFileName, storage)
 end
 
 local function GoldGetAmount(pid)
@@ -216,7 +217,7 @@ local function GuestListAdd(pid, _guestName)
 
             table.insert(storage[playerCell].guestList, guestName)
             message = "#00FA9A" .. guestName .. " is now considered a guest.\n"
-            jsonInterface.save(pathData .. jsonFileName, storage)
+            jsonInterface.save(jsonFileName, storage)
         end
     end
 
@@ -241,7 +242,7 @@ local function GuestListRemove(pid, guestName)
                 end
             end
             message = "#00FA9A" .. guestName .. " is no longer welcome in your house.\n"
-            jsonInterface.save(pathData .. jsonFileName, storage)
+            jsonInterface.save(jsonFileName, storage)
         else
             message = "#FF8C00" .. guestName .. " is not on your guest list.\n"
         end
@@ -288,7 +289,7 @@ local function CellGetList()
     local tmp = {}
     local cells = {}
 
-    local f = io.open(pathData ..  package.config:sub(1, 1) .. "cells.txt", "r")
+    local f = io.open(cellsTextFile, "r")
     if f ~= nil then
         for line in f:lines() do
             table.insert(tmp, line)
