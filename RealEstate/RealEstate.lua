@@ -12,12 +12,12 @@ local helpTextFile = tes3mp.GetModDir() .. "/custom/RealEstate/help.txt"
 local jsonFileName = "custom/RealEstate/RealEstateOwned.json"
 local basePrice = 500000
 
--- local maxAbandonTime = 336
+local maxAbandonTime = 336
 -- local portkey = true
 -- local portkeySlot = 16
 -- local portkeyRefId = "iron fork"
 
-local cellMonitorLastVisitTimer = tes3mp.CreateTimerEx("CellMonitorLastVisit", 300000, "i", 0)
+local cellMonitorLastVisitTimer = tes3mp.CreateTimerEx("RealEstateCellMonitorLastVisit", 300000, "i", 0)
 
 tes3mp.StartTimer(cellMonitorLastVisitTimer)
 
@@ -35,27 +35,27 @@ local function Help(pid)
     tes3mp.CustomMessageBox(pid, -1, message, "Close")
 end
 
--- TODO: Michael: what's this for?
--- local function CellMonitorLastVisit()
---     local timeCurrent = os.time()
+-- Ignore the linter complaint about the below function [W111]
+function RealEstateCellMonitorLastVisit()
+    local timeCurrent = os.time()
 
---     for index, item in pairs(storage) do
---         if storage[index].lastVisit ~= nil then
---             if timeCurrent - storage[index].lastVisit >= (maxAbandonTime * 3600) then
---                 CellRelease(index)
---                 local message = index .. " has been abandoned.\n"
---                 tes3mp.LogMessage(1, message)
---                 for pid, player in pairs(Players) do
---                     if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
---                         tes3mp.SendMessage(pid, "#FF8C00" .. message, false)
---                     end
---                 end
---             end
---         end
---     end
+    for index, _ in pairs(storage) do
+        if storage[index].lastVisit ~= nil then
+            if timeCurrent - storage[index].lastVisit >= (maxAbandonTime * 3600) then
+                CellRelease(index)
+                local message = index .. " has been abandoned.\n"
+                tes3mp.LogMessage(1, message)
+                for pid, _ in pairs(Players) do
+                    if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+                        tes3mp.SendMessage(pid, "#FF8C00" .. message, false)
+                    end
+                end
+            end
+        end
+    end
 
---     tes3mp.StartTimer(cellMonitorLastVisitTimer)
--- end
+    tes3mp.StartTimer(cellMonitorLastVisitTimer)
+end
 
 local function CellUpdateLastVisit(cell)
     if storage[cell] == nil then
