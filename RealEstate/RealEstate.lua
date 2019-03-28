@@ -455,7 +455,7 @@ function RealEstate.CellCheck(eventStatus, pid)
                     sendMessage = true
 
                 elseif playerName == cellOwner then
-                    message = "#00FA9AWelcome home, " .. playerName .. ".\n"
+                    message = "#00FA9AWelcome home, " .. tes3mp.GetName(pid) .. ".\n"
                     sendMessage = true
                     CellUpdateLastVisit(cellCurrent)
 
