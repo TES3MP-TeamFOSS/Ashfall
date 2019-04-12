@@ -35,6 +35,14 @@ local function Help(pid)
     tes3mp.CustomMessageBox(pid, -1, message, "Close")
 end
 
+local function CellRelease(cell)
+    if storage[cell] == nil then
+        storage[cell] = {}
+    end
+    storage[cell] = {}
+    jsonInterface.save(jsonFileName, storage)
+end
+
 -- Ignore the linter complaint about the below function [W111]
 function RealEstateCellMonitorLastVisit()
     local timeCurrent = os.time()
@@ -63,14 +71,6 @@ local function CellUpdateLastVisit(cell)
     end
 
     storage[cell].lastVisit = os.time()
-    jsonInterface.save(jsonFileName, storage)
-end
-
-local function CellRelease(cell)
-    if storage[cell] == nil then
-        storage[cell] = {}
-    end
-    storage[cell] = {}
     jsonInterface.save(jsonFileName, storage)
 end
 
