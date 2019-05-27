@@ -9,6 +9,7 @@ local RealEstate = {}
 
 local cellsTextFile = tes3mp.GetModDir() .. "/custom/RealEstate/cells.txt"
 local helpTextFile = tes3mp.GetModDir() .. "/custom/RealEstate/help.txt"
+local jsonFile = tes3mp.GetModDir() .. "/custom/RealEstate/RealEstateOwned.json"
 local jsonFileName = "custom/RealEstate/RealEstateOwned.json"
 local basePrice = 500000
 
@@ -22,6 +23,12 @@ local cellMonitorLastVisitTimer = tes3mp.CreateTimerEx("RealEstateCellMonitorLas
 tes3mp.StartTimer(cellMonitorLastVisitTimer)
 
 local storage = jsonInterface.load(jsonFileName)
+
+if storage == nil then
+   local storageFile = io.open(jsonFile, "w")
+   storageFile:write("{}")
+   storageFile:close()
+end
 
 local function Help(pid)
     local f = io.open(helpTextFile, "r")
