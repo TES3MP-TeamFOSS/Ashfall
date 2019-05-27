@@ -14,19 +14,9 @@ Requires a CoreScripts version that supports event hooks.
 
 1. Copy [`lib/lua/irc.lua`](lib/lua/irc.lua) to `CoreScripts/lib/lua/`.  Symlinks are OK.
 
-1. Copy [`IrcListener.lua`](IrcListener.lua) to `CoreScripts/scripts/custom/`.  Symlinks are OK.
-
 1. Copy [`IrcBridge.lua`](IrcBridge.lua) to `CoreScripts/scripts/custom/`.  Symlinks are OK.
 
-1. Configure [your bot settings](IrcBridge/IrcBridge.lua#L11-L15).
-
-1. Add the following to the top of `CoreScripts/serverCore.lua` (beneath `require("customScripts")`):
-
-        IrcListener = require("IrcListener")
-
-1. Add the following to `CoreScripts/serverCore.lua`, directly beneath `function UpdateTime()`:
-
-        IrcListener.RecvMessage()
+1. Configure [your bot settings](IrcBridge/IrcBridge.lua#L11-L15) ([DataManager](https://github.com/tes3mp-scripts/DataManager) is optionally supported).
 
 1. Add the following to `CoreScripts/customScripts.lua`:
 

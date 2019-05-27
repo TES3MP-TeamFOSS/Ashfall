@@ -7,11 +7,32 @@
 require("irc")
 
 local IrcBridge = {}
+
 local nick       = "TES3MPLoveBot"
 local server     = "irc.freenode.net"
 local nspasswd   = "PleaseNoCorprus"
 local channel    = "#tes3mp"
 local nickfilter = ""
+
+-- Optionally use DataManager
+if DataManager ~= nil then
+   IrcBridge.defaultConfig = {
+      nick = nick,
+      server = server,
+      nspasswd = nspasswd,
+      channel = channel,
+      nickfilter = nickfilter,
+   }
+
+   IrcBridge.config = DataManager.loadConfiguration("IrcBridge", IrcBridge.defaultConfig)
+
+   nick = IrcBridge.config.nick
+   server = IrcBridge.config.server
+   nspasswd = IrcBridge.config.nspasswd
+   channel = IrcBridge.config.channel
+   nickfilter = IrcBridge.config.nickfilter
+end
+
 local client = irc.new { nick = nick }
 local lastMessage = ""
 
@@ -63,8 +84,13 @@ function IrcBridge.OnPlayerSendMessage(eventStatus, pid, message)
     end
 end
 
+function IrcBridge.RecvMessage()
+    IrcBridge.KeepAlive()
+    IrcBridge.client:hook("OnChat", IrcBridge.ChatHook)
+end
+
 customEventHooks.registerHandler("OnPlayerConnect", IrcBridge.OnPlayerConnect)
 customEventHooks.registerValidator("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
 customEventHooks.registerHandler("OnPlayerSendMessage", IrcBridge.OnPlayerSendMessage)
 
-return IrcBridge
+customEventHooks.registerHandler("UpdateTime", IrcBridge.RecvMessage)
