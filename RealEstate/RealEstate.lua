@@ -28,6 +28,7 @@ if storage == nil then
    local storageFile = io.open(jsonFile, "w")
    storageFile:write("{}")
    storageFile:close()
+   storage = jsonInterface.load(jsonFileName)
 end
 
 local function Help(pid)
