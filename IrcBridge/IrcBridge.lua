@@ -4,34 +4,70 @@
 -- this notice you can do whatever you want with this stuff. If we meet
 -- some day, and you think this stuff is worth it, you can buy me a beer
 -- in return.  Michael Fitzmayer
-require("irc")
+local irc = require("irc")
+local time = require("time")
 
 local IrcBridge = {}
+
 local nick       = "TES3MPLoveBot"
 local server     = "irc.freenode.net"
 local nspasswd   = "PleaseNoCorprus"
 local channel    = "#tes3mp"
 local nickfilter = ""
-local client = irc.new { nick = nick }
+local updateInt  = 1
+
+-- Optionally use DataManager
+if DataManager ~= nil then
+   IrcBridge.defaultConfig = {
+      nick = nick,
+      server = server,
+      nspasswd = nspasswd,
+      channel = channel,
+      nickfilter = nickfilter,
+      updateInt = updateInt
+   }
+
+   IrcBridge.config = DataManager.loadConfiguration("IrcBridge", IrcBridge.defaultConfig)
+
+   nick = IrcBridge.config.nick
+   server = IrcBridge.config.server
+   nspasswd = IrcBridge.config.nspasswd
+   channel = IrcBridge.config.channel
+   nickfilter = IrcBridge.config.nickfilter
+   updateInt = IrcBridge.config.updateInt
+end
+
+IrcBridge.client = irc.new { nick = nick }
 local lastMessage = ""
+local timerIrcBridgeUpdate = tes3mp.CreateTimerEx("TimerIrcBridgeUpdateExpired",
+                                                time.seconds(updateInt), "i", 0)
 
-client:connect(server)
-nspasswd = "identify " .. nspasswd
-client:sendChat("NickServ", nspasswd)
-client:join(channel)
+function IrcBridge.ConnectBot()
+   IrcBridge.client:connect(server)
+   nspasswd = "identify " .. nspasswd
+   IrcBridge.client:sendChat("NickServ", nspasswd)
+   IrcBridge.client:join(channel)
+end
 
-IrcBridge.client = client
+local function aPlayerIsLoggedIn()
+   for pid, _ in pairs(Players) do
+      if Players[pid]:IsLoggedIn() then
+         return true
+      end
+   end
+   return false
+end
 
 local function sendMessage(message)
-    client:sendChat(channel, message)
-    client:think()
+    IrcBridge.client:sendChat(channel, message)
+    IrcBridge.client:think()
 end
 
 local function stringStarts(String, Start)
    return string.sub(String, 1, string.len(Start)) == Start
 end
 
-function IrcBridge.ChatHook(user, _channel, message)
+local function chatHook(user, _channel, message)
    if lastMessage ~= message and tableHelper.getCount(Players) > 0 then
       for pid, _ in pairs(Players) do
          if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
@@ -49,12 +85,19 @@ function IrcBridge.KeepAlive()
     IrcBridge.client:think()
 end
 
-function IrcBridge.OnPlayerConnect(eventStatus, pid)
+function IrcBridge.OnPlayerAuthentified(eventStatus, pid)
    sendMessage(logicHandler.GetChatName(pid) .. " joined the server.")
 end
 
+function IrcBridge.OnPlayerDeath(eventStatus, pid)
+   -- TODO: announce the actual death reason
+   sendMessage(logicHandler.GetChatName(pid) .. " has died.\n")
+end
+
 function IrcBridge.OnPlayerDisconnect(eventStatus, pid)
-   sendMessage(logicHandler.GetChatName(pid) .. " left the server.\n")
+   if Players[pid]:IsLoggedIn() then
+      sendMessage(logicHandler.GetChatName(pid) .. " left the server.\n")
+   end
 end
 
 function IrcBridge.OnPlayerSendMessage(eventStatus, pid, message)
@@ -63,8 +106,23 @@ function IrcBridge.OnPlayerSendMessage(eventStatus, pid, message)
     end
 end
 
-customEventHooks.registerHandler("OnPlayerConnect", IrcBridge.OnPlayerConnect)
-customEventHooks.registerValidator("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
+function IrcBridge.RecvMessage()
+   if aPlayerIsLoggedIn() then
+      IrcBridge.KeepAlive()
+      IrcBridge.client:hook("OnChat", chatHook)
+      tes3mp.StartTimer(timerIrcBridgeUpdate)
+   end
+end
+
+function TimerIrcBridgeUpdateExpired()
+   IrcBridge.RecvMessage()
+end
+
+
+customEventHooks.registerHandler("OnServerPostInit", IrcBridge.ConnectBot)
+customEventHooks.registerHandler("OnPlayerAuthentified", IrcBridge.OnPlayerAuthentified)
+customEventHooks.registerHandler("OnPlayerAuthentified", IrcBridge.RecvMessage)
+customEventHooks.registerHandler("OnPlayerDeath", IrcBridge.OnPlayerDeath)
 customEventHooks.registerHandler("OnPlayerSendMessage", IrcBridge.OnPlayerSendMessage)
 
-return IrcBridge
+customEventHooks.registerValidator("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
