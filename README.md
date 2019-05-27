@@ -68,4 +68,4 @@ Using [Luacheck](https://github.com/mpeterv/luacheck/blob/master/README.md#insta
 | English    | [Michael Fitzmayer](https://github.com/mupfelofen-de) |
 | French     | Nwah                                                  |
 | Portuguese | [Grim Kriegor](https://github.com/GrimKriegor)        |
-| Russian    | urm                                                   |
+| Russian    | [urm](https://github.com/uramer)                      |
