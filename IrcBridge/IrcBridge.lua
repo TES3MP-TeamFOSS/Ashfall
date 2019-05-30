@@ -70,7 +70,7 @@ function IrcBridge.KeepAlive()
     IrcBridge.client:think()
 end
 
-function IrcBridge.OnPlayerConnect(eventStatus, pid)
+function IrcBridge.OnPlayerAuthentified(eventStatus, pid)
    sendMessage(logicHandler.GetChatName(pid) .. " joined the server.")
 end
 
@@ -89,7 +89,7 @@ function IrcBridge.RecvMessage()
     IrcBridge.client:hook("OnChat", IrcBridge.ChatHook)
 end
 
-customEventHooks.registerHandler("OnPlayerConnect", IrcBridge.OnPlayerConnect)
+customEventHooks.registerHandler("OnPlayerAuthentified", IrcBridge.OnPlayerAuthentified)
 customEventHooks.registerValidator("OnPlayerDisconnect", IrcBridge.OnPlayerDisconnect)
 customEventHooks.registerHandler("OnPlayerSendMessage", IrcBridge.OnPlayerSendMessage)
 
