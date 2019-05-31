@@ -14,6 +14,7 @@ local server     = "irc.freenode.net"
 local nspasswd   = "PleaseNoCorprus"
 local channel    = "#tes3mp"
 local nickfilter = ""
+local stayLogged = 120
 local updateInt  = 1
 
 -- Optionally use DataManager
@@ -24,6 +25,7 @@ if DataManager ~= nil then
       nspasswd = nspasswd,
       channel = channel,
       nickfilter = nickfilter,
+      stayLogged = stayLogged,
       updateInt = updateInt
    }
 
@@ -34,13 +36,16 @@ if DataManager ~= nil then
    nspasswd = IrcBridge.config.nspasswd
    channel = IrcBridge.config.channel
    nickfilter = IrcBridge.config.nickfilter
+   stayLogged = IrcBridge.config.stayLogged
    updateInt = IrcBridge.config.updateInt
 end
 
 IrcBridge.client = irc.new { nick = nick }
 local lastMessage = ""
-local timerIrcBridgeUpdate = tes3mp.CreateTimerEx("TimerIrcBridgeUpdateExpired",
+local timerUpdate = tes3mp.CreateTimerEx("TimerIrcBridgeUpdateExpired",
                                                 time.seconds(updateInt), "i", 0)
+local timerLongUpdate = tes3mp.CreateTimerEx("TimerIrcBridgeUpdateExpired",
+                                                time.seconds(stayLogged), "i", 0)
 
 function IrcBridge.ConnectBot()
    IrcBridge.client:connect(server)
@@ -110,7 +115,11 @@ function IrcBridge.RecvMessage()
    if aPlayerIsLoggedIn() then
       IrcBridge.KeepAlive()
       IrcBridge.client:hook("OnChat", chatHook)
-      tes3mp.StartTimer(timerIrcBridgeUpdate)
+      tes3mp.StartTimer(timerUpdate)
+   else
+      IrcBridge.KeepAlive()
+      IrcBridge.client:hook("OnChat", chatHook)
+      tes3mp.StartTimer(timerLongUpdate)
    end
 end
 
@@ -120,6 +129,7 @@ end
 
 
 customEventHooks.registerHandler("OnServerPostInit", IrcBridge.ConnectBot)
+customEventHooks.registerHandler("OnServerPostInit", IrcBridge.RecvMessage)
 customEventHooks.registerHandler("OnPlayerAuthentified", IrcBridge.OnPlayerAuthentified)
 customEventHooks.registerHandler("OnPlayerAuthentified", IrcBridge.RecvMessage)
 customEventHooks.registerHandler("OnPlayerDeath", IrcBridge.OnPlayerDeath)
